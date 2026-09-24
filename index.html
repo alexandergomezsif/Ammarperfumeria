@@ -2756,6 +2756,196 @@
                 white-space: nowrap;
                 flex-shrink: 0;
             }
+
+            /* ── CATÁLOGO EN MÓVIL ESTILO E-COMMERCE (2 COLUMNAS COMPACTAS / SEGÚN SCREENSHOT) ── */
+            #page-catalogo .section-header {
+                margin-bottom: 12px !important;
+                text-align: center;
+            }
+            #page-catalogo .section-title {
+                font-size: 1.5rem !important;
+                margin-bottom: 2px !important;
+            }
+            #page-catalogo .section-eyebrow {
+                font-size: 0.65rem !important;
+            }
+            #page-catalogo .section-desc {
+                display: none !important; /* Elimina texto redundante para entrar directo al producto */
+            }
+            #page-catalogo .section-wrap {
+                padding-top: 18px !important;
+                padding-bottom: 24px !important;
+            }
+
+            /* Barra de controles compacta */
+            .catalog-controls {
+                margin-bottom: 14px !important;
+                gap: 8px !important;
+            }
+            .tipo-simple-box {
+                margin-bottom: 8px !important;
+                padding-bottom: 2px;
+            }
+            .controls-search-row {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 6px !important;
+            }
+            .search-box {
+                grid-column: 1 / -1 !important;
+                min-width: 0 !important;
+            }
+            .search-input {
+                padding: 10px 14px 10px 38px !important;
+                font-size: 0.8rem !important;
+            }
+            .filter-select {
+                min-width: 0 !important;
+                width: 100% !important;
+                padding: 8px 10px !important;
+                font-size: 0.72rem !important;
+            }
+            #sortFilter {
+                grid-column: 1 / -1 !important;
+            }
+            .controls-pills-row {
+                padding-bottom: 4px;
+            }
+            .filter-pill {
+                padding: 4px 10px !important;
+                font-size: 0.65rem !important;
+            }
+            .catalog-status-bar {
+                padding: 2px 2px 8px !important;
+                font-size: 0.7rem !important;
+            }
+
+            /* ── TARJETA DE PRODUCTO 2 COLUMNAS (IDÉNTICA AL SCREENSHOT) ── */
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px 8px !important;
+            }
+            .product-card {
+                border-radius: var(--radius-sm) !important;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            .card-img-wrap {
+                height: 145px !important;
+                padding: 10px !important;
+                background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(10, 11, 14, 0.95) 75%) !important;
+            }
+            .card-img-wrap img {
+                max-height: 125px !important;
+                object-fit: contain !important;
+            }
+            .badge-top {
+                top: 6px !important;
+                left: 6px !important;
+                font-size: 0.5rem !important;
+                padding: 2px 6px !important;
+                letter-spacing: 0.5px !important;
+            }
+            .badge-tipo-card {
+                display: none !important; /* Ocultar para mantener la foto limpia como en el screenshot */
+            }
+            .card-body {
+                padding: 10px 8px 12px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                flex-grow: 1 !important;
+            }
+            .card-brand {
+                font-size: 0.58rem !important;
+                letter-spacing: 1px !important;
+                margin-bottom: 2px !important;
+                color: var(--muted) !important;
+                text-transform: uppercase !important;
+            }
+            .card-name {
+                font-family: var(--font-heading) !important;
+                font-size: 0.85rem !important;
+                line-height: 1.25 !important;
+                margin-bottom: 4px !important;
+                min-height: 2.15em !important;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 2 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+            }
+            .card-tags {
+                display: flex !important;
+                gap: 4px !important;
+                margin-bottom: 6px !important;
+                flex-wrap: wrap !important;
+            }
+            .card-tag {
+                font-size: 0.55rem !important;
+                padding: 2px 6px !important;
+                border-radius: 10px !important;
+                letter-spacing: 0.2px !important;
+                background: rgba(255, 255, 255, 0.06) !important;
+                color: var(--silver) !important;
+                border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            }
+            /* Ocultar 3ra etiqueta si sobrepasa para mantener filas simétricas */
+            .card-tag:nth-child(n+3) {
+                display: none !important;
+            }
+            .card-price {
+                font-size: 0.95rem !important;
+                font-weight: 700 !important;
+                margin-bottom: 8px !important;
+                color: var(--white) !important;
+            }
+            .card-price::before {
+                content: 'DESDE ';
+                font-size: 0.58rem !important;
+                color: var(--muted) !important;
+                font-weight: 400 !important;
+                letter-spacing: 0.5px !important;
+            }
+            .card-price span {
+                font-size: 0.62rem !important;
+                color: var(--gold) !important;
+            }
+            /* Ocultar párrafo de descripción en móvil (elimina scroll infinito) */
+            .card-pitch {
+                display: none !important;
+            }
+            /* Botón ancho completo idéntico al screenshot: "+ SELECCIONE ..." / "+ VER DETALLE" */
+            .card-actions {
+                display: block !important;
+                margin-top: auto !important;
+            }
+            .btn-card-detail {
+                display: block !important;
+                width: 100% !important;
+                padding: 7px 4px !important;
+                font-size: 0.65rem !important;
+                letter-spacing: 0.8px !important;
+                font-weight: 600 !important;
+                text-transform: uppercase !important;
+                text-align: center !important;
+                border-radius: var(--radius-sm) !important;
+                background: transparent !important;
+                border: 1px solid rgba(255, 255, 255, 0.25) !important;
+                color: var(--white) !important;
+                transition: var(--transition-smooth);
+            }
+            .btn-card-detail::before {
+                content: '+ ';
+                color: var(--gold);
+                font-weight: 700;
+            }
+            .btn-card-wa {
+                display: none !important; /* Ocultar de la tarjeta pequeña: el pedido se hace en el modal o botón flotante */
+            }
+            #loadMoreBtn {
+                padding: 10px 22px !important;
+                font-size: 0.75rem !important;
+                margin: 20px auto 0 !important;
+            }
         }
 
         .mobile-drawer {
