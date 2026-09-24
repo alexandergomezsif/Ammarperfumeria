@@ -2703,34 +2703,203 @@
                 font-size: 0.8rem;
             }
 
-            /* Modal de producto y navegación móvil */
+            /* ── CATÁLOGO EN MÓVIL: REDUCCIÓN DRÁSTICA DE SCROLLING ── */
+            .catalog-controls {
+                margin-bottom: 16px !important;
+                padding: 12px 10px !important;
+                gap: 10px !important;
+            }
+            .tipo-simple-box {
+                padding: 8px 10px !important;
+                margin-bottom: 0 !important;
+            }
+            .tipo-simple-title {
+                font-size: 0.74rem !important;
+            }
+            .controls-search-row {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 6px !important;
+            }
+            .search-box {
+                grid-column: 1 / -1 !important;
+                min-width: 0 !important;
+            }
+            .search-input {
+                padding: 9px 12px 9px 34px !important;
+                font-size: 0.78rem !important;
+            }
+            .search-icon {
+                left: 10px !important;
+                font-size: 0.8rem !important;
+            }
+            .filter-select {
+                min-width: 0 !important;
+                width: 100% !important;
+                padding: 7px 8px !important;
+                font-size: 0.72rem !important;
+                height: 36px !important;
+            }
+            #sortFilter {
+                grid-column: 1 / -1 !important;
+            }
+            .catalog-status-bar {
+                padding: 0 2px 6px !important;
+                font-size: 0.7rem !important;
+            }
+            .btn-reset-filters {
+                padding: 4px 10px !important;
+                font-size: 0.65rem !important;
+            }
+
+            /* Cuadrícula de 2 columnas compacta para catálogo en móvil */
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 8px !important;
+            }
+            .product-card {
+                border-radius: var(--radius-sm) !important;
+            }
+            .card-img-wrap {
+                height: 140px !important;
+                padding: 10px !important;
+            }
+            .badge-top {
+                top: 6px !important;
+                left: 6px !important;
+                font-size: 0.5rem !important;
+                padding: 2px 6px !important;
+            }
+            .badge-tipo-card {
+                bottom: 6px !important;
+                right: 6px !important;
+                font-size: 0.5rem !important;
+                padding: 2px 5px !important;
+            }
+            .card-body {
+                padding: 10px 8px !important;
+            }
+            .card-brand {
+                font-size: 0.54rem !important;
+                letter-spacing: 1.5px !important;
+                margin-bottom: 2px !important;
+            }
+            .card-name {
+                font-size: 0.85rem !important;
+                margin-bottom: 3px !important;
+                line-height: 1.2 !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+            }
+            .card-price {
+                font-size: 0.9rem !important;
+                margin-bottom: 5px !important;
+            }
+            .card-price span {
+                font-size: 0.6rem !important;
+            }
+            /* Ocultar párrafo pitch largo en tarjetas de catálogo móvil (ahorra 60-80px por tarjeta) */
+            .card-pitch {
+                display: none !important;
+            }
+            .card-tags {
+                margin-bottom: 8px !important;
+                gap: 3px !important;
+            }
+            .card-tag {
+                font-size: 0.52rem !important;
+                padding: 2px 5px !important;
+            }
+            .card-tag:not(.tag-simple) {
+                display: none !important; /* Muestra solo el estilo olfativo principal en móvil */
+            }
+            .card-actions {
+                gap: 4px !important;
+            }
+            .btn-card-detail {
+                padding: 6px 4px !important;
+                font-size: 0.6rem !important;
+                letter-spacing: 0.5px !important;
+            }
+            .btn-card-wa {
+                width: 30px !important;
+                height: 30px !important;
+                padding: 0 !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .btn-card-wa svg {
+                width: 15px !important;
+                height: 15px !important;
+            }
+            #loadMoreBtn {
+                margin: 22px auto 0 !important;
+                padding: 10px 22px !important;
+                font-size: 0.75rem !important;
+            }
+
+            /* Modal de producto compacto en móvil */
             .modal-container { 
                 grid-template-columns: 1fr; 
-                max-height: 92vh;
+                max-height: 90vh;
+                border-radius: var(--radius-md) var(--radius-md) 0 0;
             }
-            .modal-img-col { height: 230px; padding: 18px; }
-            .modal-info-col { padding: 24px 18px 80px; }
+            .modal-img-col { height: 170px; padding: 12px; }
+            .modal-img-col img { max-height: 145px; }
+            .modal-info-col { padding: 16px 14px 72px; }
+            .modal-brand { font-size: 0.62rem; margin-bottom: 2px; }
+            .modal-name { font-size: 1.25rem; margin-bottom: 4px; line-height: 1.2; }
+            .modal-price { font-size: 1.15rem; margin-bottom: 8px; }
+            .modal-tags { margin-bottom: 10px; gap: 4px; }
+            .modal-pitch { font-size: 0.78rem; margin-bottom: 10px; line-height: 1.45; }
+            .modal-spec-block { padding: 8px 10px; margin-bottom: 8px; font-size: 0.8rem; }
+            .modal-spec-label { font-size: 0.65rem; margin-bottom: 2px; }
+            .modal-spec-text { font-size: 0.75rem; line-height: 1.4; }
+            .modal-spec-block.topology-highlight { padding: 8px 10px; margin-bottom: 8px; }
             .btn-modal-wa {
                 position: sticky;
                 bottom: 0;
-                margin-top: 20px;
+                margin-top: 14px;
+                padding: 12px 16px;
+                font-size: 0.8rem;
                 z-index: 10;
-                box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.8);
+                box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.85);
             }
 
-            .contact-layout { grid-template-columns: 1fr; gap: 20px; }
-            .contact-info-pane { padding: 24px 18px; }
-            .contact-map-pane { height: 240px; }
-            .blog-modal-body { padding: 20px 16px; }
+            /* Modal de blog compacto en móvil */
+            .blog-modal-hero-img { height: 160px; }
+            .blog-modal-body { padding: 16px 14px; }
+            .blog-modal-body h1 { font-size: 1.35rem; margin: 10px 0 12px; line-height: 1.2; }
+            .blog-modal-body h3 { font-size: 1.05rem; margin-top: 16px; }
+            .blog-modal-body p { font-size: 0.82rem; line-height: 1.55; margin-bottom: 12px; }
+            .blog-showcase-box { margin-top: 18px; padding: 12px 10px; }
+            .blog-showcase-title { font-size: 0.88rem; margin-bottom: 10px; }
+            .blog-mini-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 6px !important; margin-bottom: 10px !important; }
+            .blog-mini-card { padding: 8px 4px; }
+            .blog-mini-card img { height: 60px; margin-bottom: 4px; }
+            .bm-brand { font-size: 0.5rem; letter-spacing: 1px; }
+            .bm-name { font-size: 0.7rem; margin: 2px 0 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .bm-price { font-size: 0.68rem; margin-bottom: 6px; }
+            .bm-btn-wa { font-size: 0.55rem; padding: 4px 2px; }
+            .btn-showcase-more { padding: 6px 16px; font-size: 0.72rem; }
 
-            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+            /* Contacto y footer en móvil */
+            .contact-layout { grid-template-columns: 1fr; gap: 16px; }
+            .contact-info-pane { padding: 20px 16px; }
+            .contact-map-pane { height: 210px; }
+            .contact-item { margin-bottom: 12px; }
+
+            .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+            .site-footer { padding: 32px 0 20px; }
 
             /* Carrusel horizontal táctil para categorías olfativas */
             .tipo-simple-pills {
                 overflow-x: auto;
                 flex-wrap: nowrap;
-                padding-bottom: 8px;
+                padding-bottom: 6px;
                 -webkit-overflow-scrolling: touch;
                 scrollbar-width: none;
             }
@@ -2745,7 +2914,7 @@
             .controls-pills-row {
                 overflow-x: auto;
                 flex-wrap: nowrap;
-                padding-bottom: 6px;
+                padding-bottom: 4px;
                 -webkit-overflow-scrolling: touch;
                 scrollbar-width: none;
             }
@@ -2755,196 +2924,8 @@
             .filter-pill {
                 white-space: nowrap;
                 flex-shrink: 0;
-            }
-
-            /* ── CATÁLOGO EN MÓVIL ESTILO E-COMMERCE (2 COLUMNAS COMPACTAS / SEGÚN SCREENSHOT) ── */
-            #page-catalogo .section-header {
-                margin-bottom: 12px !important;
-                text-align: center;
-            }
-            #page-catalogo .section-title {
-                font-size: 1.5rem !important;
-                margin-bottom: 2px !important;
-            }
-            #page-catalogo .section-eyebrow {
-                font-size: 0.65rem !important;
-            }
-            #page-catalogo .section-desc {
-                display: none !important; /* Elimina texto redundante para entrar directo al producto */
-            }
-            #page-catalogo .section-wrap {
-                padding-top: 18px !important;
-                padding-bottom: 24px !important;
-            }
-
-            /* Barra de controles compacta */
-            .catalog-controls {
-                margin-bottom: 14px !important;
-                gap: 8px !important;
-            }
-            .tipo-simple-box {
-                margin-bottom: 8px !important;
-                padding-bottom: 2px;
-            }
-            .controls-search-row {
-                display: grid !important;
-                grid-template-columns: 1fr 1fr !important;
-                gap: 6px !important;
-            }
-            .search-box {
-                grid-column: 1 / -1 !important;
-                min-width: 0 !important;
-            }
-            .search-input {
-                padding: 10px 14px 10px 38px !important;
-                font-size: 0.8rem !important;
-            }
-            .filter-select {
-                min-width: 0 !important;
-                width: 100% !important;
-                padding: 8px 10px !important;
-                font-size: 0.72rem !important;
-            }
-            #sortFilter {
-                grid-column: 1 / -1 !important;
-            }
-            .controls-pills-row {
-                padding-bottom: 4px;
-            }
-            .filter-pill {
-                padding: 4px 10px !important;
-                font-size: 0.65rem !important;
-            }
-            .catalog-status-bar {
-                padding: 2px 2px 8px !important;
-                font-size: 0.7rem !important;
-            }
-
-            /* ── TARJETA DE PRODUCTO 2 COLUMNAS (IDÉNTICA AL SCREENSHOT) ── */
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 10px 8px !important;
-            }
-            .product-card {
-                border-radius: var(--radius-sm) !important;
-                display: flex !important;
-                flex-direction: column !important;
-            }
-            .card-img-wrap {
-                height: 145px !important;
-                padding: 10px !important;
-                background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(10, 11, 14, 0.95) 75%) !important;
-            }
-            .card-img-wrap img {
-                max-height: 125px !important;
-                object-fit: contain !important;
-            }
-            .badge-top {
-                top: 6px !important;
-                left: 6px !important;
-                font-size: 0.5rem !important;
-                padding: 2px 6px !important;
-                letter-spacing: 0.5px !important;
-            }
-            .badge-tipo-card {
-                display: none !important; /* Ocultar para mantener la foto limpia como en el screenshot */
-            }
-            .card-body {
-                padding: 10px 8px 12px !important;
-                display: flex !important;
-                flex-direction: column !important;
-                flex-grow: 1 !important;
-            }
-            .card-brand {
-                font-size: 0.58rem !important;
-                letter-spacing: 1px !important;
-                margin-bottom: 2px !important;
-                color: var(--muted) !important;
-                text-transform: uppercase !important;
-            }
-            .card-name {
-                font-family: var(--font-heading) !important;
-                font-size: 0.85rem !important;
-                line-height: 1.25 !important;
-                margin-bottom: 4px !important;
-                min-height: 2.15em !important;
-                display: -webkit-box !important;
-                -webkit-line-clamp: 2 !important;
-                -webkit-box-orient: vertical !important;
-                overflow: hidden !important;
-            }
-            .card-tags {
-                display: flex !important;
-                gap: 4px !important;
-                margin-bottom: 6px !important;
-                flex-wrap: wrap !important;
-            }
-            .card-tag {
-                font-size: 0.55rem !important;
-                padding: 2px 6px !important;
-                border-radius: 10px !important;
-                letter-spacing: 0.2px !important;
-                background: rgba(255, 255, 255, 0.06) !important;
-                color: var(--silver) !important;
-                border: 1px solid rgba(255, 255, 255, 0.08) !important;
-            }
-            /* Ocultar 3ra etiqueta si sobrepasa para mantener filas simétricas */
-            .card-tag:nth-child(n+3) {
-                display: none !important;
-            }
-            .card-price {
-                font-size: 0.95rem !important;
-                font-weight: 700 !important;
-                margin-bottom: 8px !important;
-                color: var(--white) !important;
-            }
-            .card-price::before {
-                content: 'DESDE ';
-                font-size: 0.58rem !important;
-                color: var(--muted) !important;
-                font-weight: 400 !important;
-                letter-spacing: 0.5px !important;
-            }
-            .card-price span {
-                font-size: 0.62rem !important;
-                color: var(--gold) !important;
-            }
-            /* Ocultar párrafo de descripción en móvil (elimina scroll infinito) */
-            .card-pitch {
-                display: none !important;
-            }
-            /* Botón ancho completo idéntico al screenshot: "+ SELECCIONE ..." / "+ VER DETALLE" */
-            .card-actions {
-                display: block !important;
-                margin-top: auto !important;
-            }
-            .btn-card-detail {
-                display: block !important;
-                width: 100% !important;
-                padding: 7px 4px !important;
-                font-size: 0.65rem !important;
-                letter-spacing: 0.8px !important;
-                font-weight: 600 !important;
-                text-transform: uppercase !important;
-                text-align: center !important;
-                border-radius: var(--radius-sm) !important;
-                background: transparent !important;
-                border: 1px solid rgba(255, 255, 255, 0.25) !important;
-                color: var(--white) !important;
-                transition: var(--transition-smooth);
-            }
-            .btn-card-detail::before {
-                content: '+ ';
-                color: var(--gold);
-                font-weight: 700;
-            }
-            .btn-card-wa {
-                display: none !important; /* Ocultar de la tarjeta pequeña: el pedido se hace en el modal o botón flotante */
-            }
-            #loadMoreBtn {
-                padding: 10px 22px !important;
-                font-size: 0.75rem !important;
-                margin: 20px auto 0 !important;
+                padding: 5px 12px;
+                font-size: 0.68rem;
             }
         }
 
@@ -3736,8 +3717,9 @@
         let currentGender = 'ALL';
         let currentTipoSimple = 'ALL';
         let currentActiveBlogArticle = null;
-        let itemsPerPage = 16;
-        let displayedCount = 16;
+        const getItemsPerPage = () => window.innerWidth <= 768 ? 10 : 16;
+        let itemsPerPage = getItemsPerPage();
+        let displayedCount = itemsPerPage;
         let filteredProducts = [];
 
         // ── NAVEGACIÓN SPA ───────────────────────────────────────────
