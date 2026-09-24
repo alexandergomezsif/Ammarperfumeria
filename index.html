@@ -1633,6 +1633,54 @@
             color: #000;
         }
 
+        .blog-showcase-footer {
+            text-align: center;
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-showcase-more {
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold-bright);
+            border: 1px solid rgba(212, 175, 55, 0.32);
+            padding: 8px 24px;
+            border-radius: var(--radius-pill);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-showcase-more:hover {
+            background: var(--gold);
+            color: #000;
+            border-color: var(--gold);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+        }
+
+        .btn-showcase-less {
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 0.75rem;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-showcase-less:hover {
+            color: var(--white);
+        }
+
         /* ── CONTACTO Y MAPA ─────────────────────────────────────────── */
         .contact-layout {
             display: grid;
@@ -3116,6 +3164,14 @@
                         <span>✨</span> Fragancias Mencionadas en esta Guía:
                     </div>
                     <div class="blog-mini-grid" id="bmMiniGrid"></div>
+                    <div class="blog-showcase-footer" id="bmShowcaseFooter">
+                        <button class="btn-showcase-more" id="bmShowcaseMoreBtn" onclick="toggleShowcaseMore()">
+                            Ver más
+                        </button>
+                        <button class="btn-showcase-less" id="bmShowcaseLessBtn" onclick="collapseShowcase()" style="display:none;">
+                            Ver menos ↑
+                        </button>
+                    </div>
                 </div>
 
                 <div style="margin-top:32px; padding-top:24px; border-top:1px solid var(--border-hairline); display:flex; gap:16px; flex-wrap:wrap;">
@@ -3342,12 +3398,67 @@
             if (fullGrid) fullGrid.innerHTML = articlesHTML;
         }
 
+        let showcaseExpanded = false;
+        let currentRelatedProducts = [];
+
+        function renderBlogShowcase() {
+            const miniGrid = document.getElementById('bmMiniGrid');
+            const footer = document.getElementById('bmShowcaseFooter');
+            const moreBtn = document.getElementById('bmShowcaseMoreBtn');
+            if (!miniGrid) return;
+
+            // Mostrar solo 3 piezas inicialmente, o todas si se expande
+            const visibleProducts = showcaseExpanded ? currentRelatedProducts : currentRelatedProducts.slice(0, 3);
+
+            miniGrid.innerHTML = visibleProducts.map(p => `
+                <div class="blog-mini-card">
+                    <img src="${p.imagen}" alt="${p.nombre}" loading="lazy">
+                    <div class="bm-brand">${p.marca}</div>
+                    <div class="bm-name">${p.nombre}</div>
+                    <div class="bm-price">${formatCOP(p.precio)} COP</div>
+                    <button class="bm-btn-wa" onclick="closeBlogModal(); openProductModal(${p.id})">Ver Ficha</button>
+                </div>
+            `).join('');
+
+            if (footer && moreBtn) {
+                const lessBtn = document.getElementById('bmShowcaseLessBtn');
+                if (currentRelatedProducts.length > 3) {
+                    footer.style.display = 'flex';
+                    if (!showcaseExpanded) {
+                        moreBtn.innerHTML = `Ver más`;
+                        moreBtn.onclick = toggleShowcaseMore;
+                        if (lessBtn) lessBtn.style.display = 'none';
+                    } else {
+                        moreBtn.innerHTML = `Ver más en el Catálogo →`;
+                        moreBtn.onclick = applyBlogRelatedFilter;
+                        if (lessBtn) lessBtn.style.display = 'inline-block';
+                    }
+                } else {
+                    footer.style.display = 'flex';
+                    moreBtn.innerHTML = `Ver más en el Catálogo →`;
+                    moreBtn.onclick = applyBlogRelatedFilter;
+                    if (lessBtn) lessBtn.style.display = 'none';
+                }
+            }
+        }
+
+        function toggleShowcaseMore() {
+            showcaseExpanded = true;
+            renderBlogShowcase();
+        }
+
+        function collapseShowcase() {
+            showcaseExpanded = false;
+            renderBlogShowcase();
+        }
+
         // ── LECTOR MODAL DE BLOG CON VINCULACIÓN AL CATÁLOGO ──────────
         function openBlogArticle(id) {
             const article = BLOG_ARTICLES.find(a => a.id === id);
             if (!article) return;
 
             currentActiveBlogArticle = article;
+            showcaseExpanded = false;
 
             document.getElementById('bmImg').src = article.image;
             document.getElementById('bmTag').textContent = article.tag;
@@ -3355,23 +3466,14 @@
             document.getElementById('bmTitle').textContent = article.title;
             document.getElementById('bmContent').innerHTML = article.content;
 
-            // Renderizar mini-vitrina de fragancias relacionadas en este blog
-            const miniGrid = document.getElementById('bmMiniGrid');
-            const relatedProducts = PRODUCTS.filter(p => {
+            // Obtener fragancias relacionadas en este blog (inicialmente solo 3)
+            currentRelatedProducts = PRODUCTS.filter(p => {
                 return article.relatedProductNames.some(name => p.nombre.toLowerCase().includes(name.toLowerCase()));
-            }).slice(0, 4);
+            });
 
-            if (relatedProducts.length > 0) {
+            if (currentRelatedProducts.length > 0) {
                 document.getElementById('bmShowcaseBox').style.display = 'block';
-                miniGrid.innerHTML = relatedProducts.map(p => `
-                    <div class="blog-mini-card">
-                        <img src="${p.imagen}" alt="${p.nombre}" loading="lazy">
-                        <div class="bm-brand">${p.marca}</div>
-                        <div class="bm-name">${p.nombre}</div>
-                        <div class="bm-price">${formatCOP(p.precio)} COP</div>
-                        <button class="bm-btn-wa" onclick="closeBlogModal(); openProductModal(${p.id})">Ver Ficha</button>
-                    </div>
-                `).join('');
+                renderBlogShowcase();
             } else {
                 document.getElementById('bmShowcaseBox').style.display = 'none';
             }
