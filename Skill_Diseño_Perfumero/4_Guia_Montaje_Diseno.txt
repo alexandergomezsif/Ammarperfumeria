@@ -1,0 +1,22 @@
+=========================================
+ GUÍA DE MONTAJE Y DISEÑO (Ej. en Canva)
+=========================================
+Para que el flyer NO parezca "falso" o generado por una IA barata, sigue estos 5 pasos al montar tus perfumes sobre los fondos:
+
+1. RECORTES PERFECTOS: 
+Asegúrate de que no queden bordes blancos o mordidos al quitar el fondo de tus fotos de perfumes. Usa la herramienta de quitar fondo de Canva Pro o webs como Photoroom.
+
+2. LA REGLA DE LAS SOMBRAS (CRÍTICO): 
+Un objeto sin sombra parece flotar. En Canva, ve a Editar Imagen > Sombras > "Paralela" o "Proyectada". 
+Fíjate de dónde viene la luz en el fondo que generaste. Si la luz viene de la izquierda, la sombra del perfume debe caer hacia la derecha. Ajusta la transparencia de la sombra al 40-50% (nunca negra al 100%) y hazla un poco difuminada (blur).
+
+3. REFLEJOS (OPCIONAL PERO LUJOSO):
+Si el fondo es mármol o vidrio, duplica la foto del perfume, voltéala verticalmente, ponla debajo del perfume original y bájale la transparencia al 15%. Parecerá que se refleja en el piso.
+
+4. ESCALA Y PERSPECTIVA:
+No pongas los perfumes gigantes. Deja que el fondo respire. En el lujo, el "espacio en blanco" (espacio vacío) es sinónimo de elegancia. Los perfumes más grandes (100ml) atrás, los más pequeños adelante. 
+
+5. TEXTOS MINIMALISTAS:
+Usa fuentes Serif clásicas (como Playfair Display, Cinzel, o Bodoni) para títulos, combinadas con fuentes Sans-Serif limpias (como Montserrat, Helvetica o Lato) para descripciones.
+NO uses más de 2 tipos de letra diferentes.
+Usa colores de la misma paleta del fondo (ej. un gris oscuro en lugar de un negro puro, o un dorado viejo extraído de la tapa de un perfume).

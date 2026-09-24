@@ -1,0 +1,457 @@
+﻿[
+    {
+        "Row":  2,
+        "Marca":  "Afnan",
+        "Referencia":  "9am Dive"
+    },
+    {
+        "Row":  3,
+        "Marca":  null,
+        "Referencia":  "9pm"
+    },
+    {
+        "Row":  4,
+        "Marca":  null,
+        "Referencia":  "9pm Rebel"
+    },
+    {
+        "Row":  5,
+        "Marca":  "Ariana Grande",
+        "Referencia":  "Cloud"
+    },
+    {
+        "Row":  6,
+        "Marca":  null,
+        "Referencia":  "Cloud 2.0 Intense"
+    },
+    {
+        "Row":  7,
+        "Marca":  null,
+        "Referencia":  "Cloud Pink"
+    },
+    {
+        "Row":  8,
+        "Marca":  null,
+        "Referencia":  "Mod Blush"
+    },
+    {
+        "Row":  9,
+        "Marca":  null,
+        "Referencia":  "REM"
+    },
+    {
+        "Row":  10,
+        "Marca":  null,
+        "Referencia":  "REM 2"
+    },
+    {
+        "Row":  11,
+        "Marca":  null,
+        "Referencia":  "Thank U Next"
+    },
+    {
+        "Row":  12,
+        "Marca":  "Armaf",
+        "Referencia":  "Club de Nuit Woman"
+    },
+    {
+        "Row":  13,
+        "Marca":  null,
+        "Referencia":  "Lionheart"
+    },
+    {
+        "Row":  14,
+        "Marca":  null,
+        "Referencia":  "Lionheart 2"
+    },
+    {
+        "Row":  15,
+        "Marca":  null,
+        "Referencia":  "Odyssey Collection"
+    },
+    {
+        "Row":  16,
+        "Marca":  null,
+        "Referencia":  "Odyssey Mandarin Sky"
+    },
+    {
+        "Row":  17,
+        "Marca":  null,
+        "Referencia":  "Odyssey Mandarin Sky Elixir"
+    },
+    {
+        "Row":  18,
+        "Marca":  null,
+        "Referencia":  "Yum Yum"
+    },
+    {
+        "Row":  19,
+        "Marca":  "Armani",
+        "Referencia":  "Acqua di Gio Profondo"
+    },
+    {
+        "Row":  20,
+        "Marca":  null,
+        "Referencia":  "Si Passione"
+    },
+    {
+        "Row":  21,
+        "Marca":  "Bharara",
+        "Referencia":  "King"
+    },
+    {
+        "Row":  22,
+        "Marca":  null,
+        "Referencia":  "Niche Femme"
+    },
+    {
+        "Row":  23,
+        "Marca":  null,
+        "Referencia":  "Scarlet"
+    },
+    {
+        "Row":  24,
+        "Marca":  "Carolina Herrera",
+        "Referencia":  "212 VIP Black"
+    },
+    {
+        "Row":  25,
+        "Marca":  null,
+        "Referencia":  "Good Girl"
+    },
+    {
+        "Row":  26,
+        "Marca":  null,
+        "Referencia":  "Very Good Girl"
+    },
+    {
+        "Row":  27,
+        "Marca":  "Chanel",
+        "Referencia":  "Coco Mademoiselle"
+    },
+    {
+        "Row":  28,
+        "Marca":  "Creed",
+        "Referencia":  "Aventus"
+    },
+    {
+        "Row":  29,
+        "Marca":  null,
+        "Referencia":  "Silver Mountain Water"
+    },
+    {
+        "Row":  30,
+        "Marca":  "Dior",
+        "Referencia":  "Jadore Marina"
+    },
+    {
+        "Row":  31,
+        "Marca":  null,
+        "Referencia":  "Miss Dior"
+    },
+    {
+        "Row":  32,
+        "Marca":  null,
+        "Referencia":  "Sauvage 2"
+    },
+    {
+        "Row":  33,
+        "Marca":  "Dolce \u0026 Gabbana",
+        "Referencia":  "Light Blue"
+    },
+    {
+        "Row":  34,
+        "Marca":  "Hugo Boss",
+        "Referencia":  "Boss Bottled"
+    },
+    {
+        "Row":  35,
+        "Marca":  null,
+        "Referencia":  "Boss Bottled 2"
+    },
+    {
+        "Row":  36,
+        "Marca":  "Ilmin",
+        "Referencia":  "Il Femme"
+    },
+    {
+        "Row":  37,
+        "Marca":  null,
+        "Referencia":  "Il Roso"
+    },
+    {
+        "Row":  38,
+        "Marca":  "Initio",
+        "Referencia":  "Oud For Greatness"
+    },
+    {
+        "Row":  39,
+        "Marca":  null,
+        "Referencia":  "Oud For Greatness Blue"
+    },
+    {
+        "Row":  40,
+        "Marca":  "Jean Paul Gaultier",
+        "Referencia":  "Le Beau"
+    },
+    {
+        "Row":  41,
+        "Marca":  null,
+        "Referencia":  "Scandal"
+    },
+    {
+        "Row":  42,
+        "Marca":  "Lacoste",
+        "Referencia":  "L1212 Blanc"
+    },
+    {
+        "Row":  43,
+        "Marca":  null,
+        "Referencia":  "Lacoste Rouge"
+    },
+    {
+        "Row":  44,
+        "Marca":  "Lancome",
+        "Referencia":  "La vie est belle"
+    },
+    {
+        "Row":  45,
+        "Marca":  "Lattafa",
+        "Referencia":  "Afeef"
+    },
+    {
+        "Row":  46,
+        "Marca":  null,
+        "Referencia":  "Art of Universe"
+    },
+    {
+        "Row":  47,
+        "Marca":  null,
+        "Referencia":  "Art of Universe 4"
+    },
+    {
+        "Row":  48,
+        "Marca":  null,
+        "Referencia":  "Asad"
+    },
+    {
+        "Row":  49,
+        "Marca":  null,
+        "Referencia":  "Asad Bourbon"
+    },
+    {
+        "Row":  50,
+        "Marca":  null,
+        "Referencia":  "Badee Al Oud Amethyst"
+    },
+    {
+        "Row":  51,
+        "Marca":  null,
+        "Referencia":  "Badee Al Oud Amethyst 4"
+    },
+    {
+        "Row":  52,
+        "Marca":  null,
+        "Referencia":  "Badee Al Oud Honor and Glory White"
+    },
+    {
+        "Row":  53,
+        "Marca":  null,
+        "Referencia":  "Badee Al Oud Oud for Glory Black"
+    },
+    {
+        "Row":  54,
+        "Marca":  null,
+        "Referencia":  "Badee Al Oud Pink"
+    },
+    {
+        "Row":  55,
+        "Marca":  null,
+        "Referencia":  "Badee Al Oud Sublime"
+    },
+    {
+        "Row":  56,
+        "Marca":  null,
+        "Referencia":  "Eclaire"
+    },
+    {
+        "Row":  57,
+        "Marca":  null,
+        "Referencia":  "His Confession"
+    },
+    {
+        "Row":  58,
+        "Marca":  null,
+        "Referencia":  "Khamrah"
+    },
+    {
+        "Row":  59,
+        "Marca":  null,
+        "Referencia":  "Khamrah Dukhan"
+    },
+    {
+        "Row":  60,
+        "Marca":  null,
+        "Referencia":  "Khamrah Qahwa"
+    },
+    {
+        "Row":  61,
+        "Marca":  null,
+        "Referencia":  "Victoria"
+    },
+    {
+        "Row":  62,
+        "Marca":  null,
+        "Referencia":  "Yara"
+    },
+    {
+        "Row":  63,
+        "Marca":  null,
+        "Referencia":  "Yara Candy"
+    },
+    {
+        "Row":  64,
+        "Marca":  null,
+        "Referencia":  "Yara Tous"
+    },
+    {
+        "Row":  65,
+        "Marca":  "Le Labo",
+        "Referencia":  "Santal 33"
+    },
+    {
+        "Row":  66,
+        "Marca":  "Louis Vuitton",
+        "Referencia":  "Ombre Nomade 3"
+    },
+    {
+        "Row":  67,
+        "Marca":  "Montale",
+        "Referencia":  "Arabians Tonka"
+    },
+    {
+        "Row":  68,
+        "Marca":  null,
+        "Referencia":  "Starry Nights"
+    },
+    {
+        "Row":  69,
+        "Marca":  "Moschino",
+        "Referencia":  "Toy 2"
+    },
+    {
+        "Row":  70,
+        "Marca":  null,
+        "Referencia":  "Toy 2 Pearl"
+    },
+    {
+        "Row":  71,
+        "Marca":  null,
+        "Referencia":  "Toy Boy 2"
+    },
+    {
+        "Row":  72,
+        "Marca":  "Orientica",
+        "Referencia":  "Amber Rouge"
+    },
+    {
+        "Row":  73,
+        "Marca":  null,
+        "Referencia":  "Royal Amber"
+    },
+    {
+        "Row":  74,
+        "Marca":  null,
+        "Referencia":  "Velvet Gold"
+    },
+    {
+        "Row":  75,
+        "Marca":  "Paco Rabanne",
+        "Referencia":  "1 Million Lucky"
+    },
+    {
+        "Row":  76,
+        "Marca":  null,
+        "Referencia":  "Fame Blooming Pink"
+    },
+    {
+        "Row":  77,
+        "Marca":  null,
+        "Referencia":  "Invictus"
+    },
+    {
+        "Row":  78,
+        "Marca":  null,
+        "Referencia":  "Phantom"
+    },
+    {
+        "Row":  79,
+        "Marca":  "Parfums de Marly",
+        "Referencia":  "Delina Exclusif"
+    },
+    {
+        "Row":  80,
+        "Marca":  null,
+        "Referencia":  "Kalan"
+    },
+    {
+        "Row":  81,
+        "Marca":  "Paris Corner",
+        "Referencia":  "Marshmallow Blush"
+    },
+    {
+        "Row":  82,
+        "Marca":  "Paris Hilton",
+        "Referencia":  "Rose Rush"
+    },
+    {
+        "Row":  83,
+        "Marca":  "Perry Ellis",
+        "Referencia":  360
+    },
+    {
+        "Row":  84,
+        "Marca":  "Prada",
+        "Referencia":  "Paradoxe Intense"
+    },
+    {
+        "Row":  85,
+        "Marca":  "Rave",
+        "Referencia":  "Now Women"
+    },
+    {
+        "Row":  86,
+        "Marca":  "Tom Ford",
+        "Referencia":  "Tobacco Vanille"
+    },
+    {
+        "Row":  87,
+        "Marca":  "Tommy Hilfiger",
+        "Referencia":  "Tommy"
+    },
+    {
+        "Row":  88,
+        "Marca":  "Valentino",
+        "Referencia":  "Born In Roma Set"
+    },
+    {
+        "Row":  89,
+        "Marca":  null,
+        "Referencia":  "Uomo Born In Roma"
+    },
+    {
+        "Row":  90,
+        "Marca":  "Viktor \u0026 Rolf",
+        "Referencia":  "Spicebomb"
+    },
+    {
+        "Row":  91,
+        "Marca":  "Yves Saint Laurent",
+        "Referencia":  "Libre"
+    },
+    {
+        "Row":  92,
+        "Marca":  "Lattafa",
+        "Referencia":  "Ajwad"
+    }
+]

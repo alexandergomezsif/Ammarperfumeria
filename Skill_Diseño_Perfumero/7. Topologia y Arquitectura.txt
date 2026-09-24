@@ -1,0 +1,510 @@
+Topología y Arquitectura Olfativa
+9am Dive (Afnan)
+
+Clasificación: Inspiración / Híbrido
+
+Detalle: Toma el framework aromático-acuático de Bleu de Chanel y fusiona variables de YSL Y. No es una réplica exacta, sino una iteración optimizada.
+
+9pm (Afnan)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Ingeniería inversa directa y fiel a la fórmula de Ultra Male de Jean Paul Gaultier.
+
+9pm Rebel (Afnan)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Bifurcación (fork) del código base de 9pm. Añade variables frutales (piña) para acercarse a perfiles tipo Aventus o Phantom.
+
+Cloud (Ariana Grande)
+
+Clasificación: Pilar / Inspiración
+
+Detalle: Es el código fuente original de su propia línea, pero su arquitectura técnica está fuertemente inspirada en el perfil dulce/medicinal de Baccarat Rouge 540 (MFK).
+
+Cloud 2.0 Intense (Ariana Grande)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Optimización de concentración del Cloud original; inyecta mayor carga de ambroxan y maderas.
+
+Cloud Pink (Ariana Grande)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Derivación del Cloud original. Sustituye la nota de lavanda por fruta del dragón.
+
+Mod Blush (Ariana Grande)
+
+Clasificación: Pilar
+
+Detalle: Código base original e independiente dentro de la marca.
+
+REM (Ariana Grande)
+
+Clasificación: Pilar
+
+Detalle: Código base original centrado en el acorde lavanda-sal-caramelo.
+
+Thank U Next (Ariana Grande)
+
+Clasificación: Pilar
+
+Detalle: Código base original centrado en repostería y coco.
+
+Club de Nuit Woman (Armaf)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Réplica técnica de alto rendimiento de Coco Mademoiselle de Chanel.
+
+Lionheart
+
+Clasificación: Equivalencia
+
+Detalle: Contratipo genérico de bajo coste comercializado por marcas de catálogo (ej. Dorall Collection), usualmente sin arquitectura propia.
+
+Odyssey Collection (Armaf)
+
+Clasificación: Framework / Línea base
+
+Detalle: No es un perfume individual, sino el ecosistema donde se alojan múltiples derivaciones y dupes de la marca.
+
+Odyssey Mandarin Sky (Armaf)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Ingeniería inversa de Scandal Pour Homme de Jean Paul Gaultier.
+
+Odyssey Mandarin Sky Elixir (Armaf)
+
+Clasificación: No verificable
+
+Detalle: Ausencia de registros oficiales en la base de datos global de Armaf para la terminación "Elixir" en esta línea específica.
+
+Yum Yum
+
+Clasificación: Dupe / Inspiración
+
+Detalle: Si es de marca árabe, es una réplica técnica diseñada para emular a Yum Pistachio Gelato | 33 de Kayali.
+
+Acqua di Gio Profondo (Giorgio Armani)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Actualización marina e inyección de notas minerales (Aquozone) al código pilar del Acqua di Gio de 1996.
+
+Si Passione (Giorgio Armani)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Derivación frutal y vibrante del pilar original Armani Si.
+
+King
+
+Clasificación: Ambigüedad de nodo
+
+Detalle: Si es K by Dolce & Gabbana, es un Pilar. Si es Bharara King, es una Inspiración/Dupe que utiliza la estructura base de Erba Pura de Xerjoff.
+
+Niche Femme (Armaf)
+
+Clasificación: Inspiración
+
+Detalle: Perfil construido sobre frameworks de perfumería oriental nicho, sin apuntar a una réplica 1:1 específica.
+
+Scarlet
+
+Clasificación: Inspiración / Dupe
+
+Detalle: Si refiere a Bharara Scarlet, es una iteración que clona el código frutal-almizclado de referencias nicho como Erba Pura o Kirke.
+
+212 VIP Black (Carolina Herrera)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Bifurcación nocturna (absenta y vainilla) del pilar 212 VIP Men.
+
+Good Girl (Carolina Herrera)
+
+Clasificación: Pilar
+
+Detalle: Código fuente original (envase tacón) y base de toda su línea de flankers.
+
+Very Good Girl (Carolina Herrera)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Deriva de Good Girl, pero modifica su núcleo hacia notas de lichi y rosa (arquitectura inspirada por Delina de PDM).
+
+Coco Mademoiselle (Chanel)
+
+Clasificación: Pilar (Evolutivo)
+
+Detalle: Nació como derivación de Coco, pero por su impacto en la industria opera actualmente como un código fuente independiente.
+
+Aventus (Creed)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: El estándar de oro de la industria. Código base (piña ahumada) que originó la mayor cantidad de clones y dupes en el mercado moderno.
+
+Silver Mountain Water (Creed)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: Arquitectura original de Creed; fresco, metálico y verde.
+
+Jadore Marina
+
+Clasificación: Error de sintaxis (Null)
+
+Detalle: Nomenclatura inexistente. Posible confusión con flankers oficiales como J'adore In Joy.
+
+Miss Dior (Dior)
+
+Clasificación: Pilar
+
+Detalle: Código base con múltiples reformulaciones oficiales a lo largo de las décadas.
+
+Sauvage Parfum (Dior)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Iteración de mayor concentración de aceites y resinas (olíbano) basada en el pilar Sauvage EDT.
+
+Light Blue (Dolce & Gabbana)
+
+Clasificación: Pilar
+
+Detalle: Estructura cítrica fundacional.
+
+Boss Bottled (Hugo Boss)
+
+Clasificación: Pilar
+
+Detalle: Diseño clásico centrado en manzana y canela.
+
+Boss Bottled Parfum (Hugo Boss)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Densificación del pilar original mediante notas de cuero e incienso.
+
+Il Femme (ILMIN)
+
+Clasificación: Pilar (Nicho Latino)
+
+Detalle: Opera con patente propia, fuertemente inspirado en protocolos olfativos de medio oriente.
+
+Il Roso (ILMIN)
+
+Clasificación: Pilar (Nicho Latino)
+
+Detalle: Estructura independiente dentro de la marca centrada en la rosa turca.
+
+Oud For Greatness (Initio)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: Código fuente de azafrán, oud y pachulí. Es el objetivo principal de múltiples casas clonadoras árabes.
+
+Le Beau (Jean Paul Gaultier)
+
+Clasificación: Flanker (Derivación autónoma)
+
+Detalle: Se ramifica de la familia Le Male, pero establece un entorno completamente nuevo basado en el coco.
+
+Scandal (Jean Paul Gaultier)
+
+Clasificación: Pilar
+
+Detalle: Código base original (perfil gourmand extremo).
+
+L1212 Blanc (Lacoste)
+
+Clasificación: Pilar
+
+Detalle: Código base fundacional de la línea L1212 (algodón limpio).
+
+Lacoste Rouge
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Iteración especiada (manzana roja, té rooibos) del marco L1212.
+
+La vie est belle (Lancôme)
+
+Clasificación: Pilar
+
+Detalle: Estándar moderno de la perfumería floral-gourmand.
+
+Afeef (Lattafa)
+
+Clasificación: Inspiración
+
+Detalle: Usa arquitecturas de diseñador occidental (fresco amaderado) sin ser un clon 1:1.
+
+Ajwad (Lattafa)
+
+Clasificación: Inspiración / Híbrido
+
+Detalle: Toma el núcleo floral-dulce de Roses Vanille (Mancera) y le inyecta una sobredosis de fruta metálica.
+
+Art of Universe
+
+Clasificación: No verificable
+
+Detalle: Carente de documentación técnica pública en el ecosistema perfumista oficial.
+
+Asad (Lattafa)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Ingeniería inversa de alta precisión orientada a replicar Sauvage Elixir (Dior).
+
+Asad Bourbon
+
+Clasificación: No verificable / Error de sintaxis
+
+Detalle: La base de datos de Lattafa solo registra Asad y el flanker Asad Zanzibar.
+
+Badee Al Oud Amethyst (Lattafa)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Réplica técnica de Atomic Rose (Initio Parfums Privés).
+
+Badee Al Oud Honor and Glory White (Lattafa)
+
+Clasificación: Inspiración
+
+Detalle: Toma elementos del marco de TriBeCa de Bond No. 9 y lo fusiona con un acorde de piña acaramelada. No es un clon 1:1.
+
+Badee Al Oud Oud for Glory Black (Lattafa)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Réplica técnica y directa de Oud for Greatness (Initio).
+
+Badee Al Oud Sublime (Lattafa)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Réplica orientada a copiar Eden Juicy Apple | 01 de Kayali.
+
+Eclaire (Lattafa)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Copia exacta de la formulación hiper-lactónica de Bianco Latte (Giardini Di Toscana).
+
+His Confession (Lattafa)
+
+Clasificación: Dupe / Híbrido
+
+Detalle: Ingeniería inversa que busca revivir la arquitectura de descontinuados como Armani Code Absolu y YSL Tuxedo.
+
+Khamrah (Lattafa)
+
+Clasificación: Inspiración
+
+Detalle: Basado en el marco de Angels' Share de Kilian, pero modifica variables clave (elimina el coñac, inyecta dátiles). No es un Dupe 1:1.
+
+Khamrah Dukhan
+
+Clasificación: No verificable / Error de sintaxis
+
+Detalle: Sólo existen registros oficiales de Khamrah y Khamrah Qahwa.
+
+Khamrah Qahwa (Lattafa)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Modifica el código original de Khamrah añadiendo un nodo de café tostado amargo.
+
+Victoria
+
+Clasificación: No verificable
+
+Detalle: Sintaxis ambigua. Requiere el nombre de la casa matriz (Victoria's Secret, Fragrance World, etc.).
+
+Yara (Lattafa)
+
+Clasificación: Pilar / Inspiración
+
+Detalle: Pilar comercial de Lattafa, pero su estructura toma prestados protocolos del Pepe Jeans for Her original.
+
+Yara Candy (Lattafa)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Derivación del Yara original; iteración dirigida a emular dulces de confitería.
+
+Yara Tous (Lattafa)
+
+Clasificación: Flanker (Derivación) / Inspiración
+
+Detalle: Derivación tropical; toma inspiraciones estructurales de Alien Goddess de Mugler y Fame de Paco Rabanne.
+
+Santal 33 (Le Labo)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: Código maestro original (sándalo, papiro, cuero). Extremadamente imitado.
+
+Ombre Nomade (Louis Vuitton)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: Fórmula original y exclusiva de la casa (Oud, rosa, incienso).
+
+Arabians Tonka (Montale)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: Código fuente de rendimiento extremo (azúcar, oud, haba tonka).
+
+Starry Nights (Montale)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: Estructura independiente dentro del ecosistema Montale.
+
+Toy 2 (Moschino)
+
+Clasificación: Pilar
+
+Detalle: Código base independiente centrado en manzana y almizcle blanco.
+
+Toy 2 Pearl (Moschino)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Modificación del framework original introduciendo notas minerales y saladas.
+
+Toy Boy 2
+
+Clasificación: No verificable / Error de sintaxis
+
+Detalle: Moschino solo ha desplegado el pilar original Toy Boy en esta sub-línea.
+
+Amber Rouge (Orientica)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Réplica en hardware premium del Baccarat Rouge 540 Extrait.
+
+Royal Amber (Orientica)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Clon de alto rendimiento de Erba Pura de Xerjoff.
+
+Velvet Gold (Orientica)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Réplica de Gentle Fluidity Gold de Maison Francis Kurkdjian (MFK).
+
+1 Million Lucky (Paco Rabanne)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Alteración agresiva del 1 Million original, introduciendo variables de ciruela y avellana.
+
+Fame Blooming Pink (Paco Rabanne)
+
+Clasificación: Flanker / Edición Especial
+
+Detalle: Modificación estética/comercial del pilar Fame.
+
+Invictus (Paco Rabanne)
+
+Clasificación: Pilar
+
+Detalle: Arquitectura original que definió el género "dulce/acuático" moderno.
+
+Phantom (Paco Rabanne)
+
+Clasificación: Pilar
+
+Detalle: Código original basado en la integración de cítricos, lavanda y vainilla terrosa.
+
+Delina Exclusif (Parfums de Marly)
+
+Clasificación: Flanker (Derivación Nicho)
+
+Detalle: Densificación (oud e incienso) del pilar original Delina.
+
+Kalan (Parfums de Marly)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: Estructura independiente de especias rojas y naranja sanguina.
+
+Marshmallow Blush
+
+Clasificación: Equivalencia / Body Mist
+
+Detalle: Formulación ultra simple (bruma corporal genérica) sin pirámide olfativa escalonada.
+
+Rose Rush (Paris Hilton)
+
+Clasificación: Flanker / Pilar
+
+Detalle: Parte de la línea "Rush", operando con código propio.
+
+360 (Perry Ellis)
+
+Clasificación: Pilar
+
+Detalle: Clásico original de los 90.
+
+Paradoxe Intense (Prada)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Incremento de variables florales (neroli) y musgo frente al Paradoxe base.
+
+Now Women (Rave / Lattafa)
+
+Clasificación: Dupe (Clon exacto)
+
+Detalle: Ingeniería inversa que emula el despliegue de Burberry Her EDP.
+
+Tobacco Vanille (Tom Ford)
+
+Clasificación: Pilar (Nicho)
+
+Detalle: Obra maestra original de la línea Private Blend.
+
+Tommy (Tommy Hilfiger)
+
+Clasificación: Pilar
+
+Detalle: Código fuente fundacional de la casa.
+
+Uomo Born In Roma (Valentino)
+
+Clasificación: Flanker (Derivación)
+
+Detalle: Derivación modernizada (notas minerales/dulces) del Valentino Uomo original.
+
+Uomo Born In Roma Set (Valentino)
+
+Clasificación: Colección Retail
+
+Detalle: Empaquetado comercial que compila el perfume pilar o sus flankers. No es una fragancia per se.
+
+Spicebomb (Viktor&Rolf)
+
+Clasificación: Pilar
+
+Detalle: Código original de especias y tabaco.
+
+Libre (Yves Saint Laurent)
+
+Clasificación: Pilar
+
+Detalle: Arquitectura original que redefinió la lavanda en el entorno femenino comercial.

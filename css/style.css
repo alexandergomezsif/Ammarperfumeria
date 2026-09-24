@@ -1,0 +1,304 @@
+﻿/* ==========================================================================
+   WEB 5 ESTRELLAS - AMMAR PERFUMERÍA CSS
+   Arquitectura limpia, sin hacks, semántica y responsiva
+   ========================================================================== */
+
+:root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text-dark: #111111;
+    --text-light: #666666;
+    --border: #eaeaea;
+    --shadow-hover: rgba(0, 0, 0, 0.05);
+    
+    /* Variables de tipografía */
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* 1. RESET Y BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Clase de utilidad para Accesibilidad (Screen Readers) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 2. LAYOUT PRINCIPAL */
+.main-header {
+    background-color: var(--surface);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand-logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.brand-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    display: block;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.header-meta {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, var(--surface) 0%, var(--bg) 100%);
+}
+
+.hero-section h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* 3. FORMULARIOS Y BÚSQUEDA */
+.catalog-search {
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-control {
+    padding: 12px 20px;
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    outline: none;
+    min-width: 200px;
+    transition: border-color 0.3s;
+}
+
+.filter-control:focus {
+    border-color: var(--text-dark);
+}
+
+#searchInput {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* 4. COMPONENTES: PRODUCT GRID & CARDS */
+.product-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 80px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    color: var(--text-light);
+}
+
+.product-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-hover);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    mix-blend-mode: multiply;
+}
+
+/* Imagen fallback desde CSS */
+.product-image.error-fallback {
+    content: url("https://via.placeholder.com/300x400?text=AMMAR");
+}
+
+.product-brand {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.product-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.product-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+}
+
+.product-pitch {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.product-meta {
+    font-size: 0.75rem;
+    border-top: 1px solid var(--border);
+    padding-top: 15px;
+}
+
+.meta-line {
+    margin-bottom: 5px;
+}
+
+.meta-label {
+    font-weight: 500;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+}
+
+/* Botón de acción semántico */
+.btn-action {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: var(--text-dark);
+    color: var(--surface);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid var(--text-dark);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-action:hover, .btn-action:focus {
+    background-color: var(--surface);
+    color: var(--text-dark);
+    outline: 2px solid var(--text-dark);
+    outline-offset: 2px;
+}
+
+/* 5. FOOTER */
+.main-footer {
+    background-color: var(--text-dark);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.85rem;
+}
+
+/* 6. RESPONSIVE Y PRINT */
+@media print {
+    body { background: white; }
+    .main-header, .hero-section, .catalog-search, .main-footer, .btn-action { 
+        display: none !important; 
+    }
+    .product-grid {
+        display: block;
+        padding: 0;
+    }
+    .product-card {
+        page-break-inside: avoid;
+        margin-bottom: 30px;
+        border: 1px solid #ccc;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .product-image {
+        width: 30%;
+        height: 200px;
+        margin-bottom: 0;
+    }
+    .product-info-wrapper {
+        width: 70%;
+    }
+}
