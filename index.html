@@ -2424,25 +2424,307 @@
             }
             .floating-wa-tooltip { display: none; }
 
-            .guarantees-grid { grid-template-columns: 1fr; }
+            /* Reducción general de espaciado y scrolling en móvil */
+            .section-wrap {
+                padding: 34px 16px;
+            }
+            .section-header {
+                margin-bottom: 20px;
+            }
+            .section-title {
+                font-size: 1.85rem;
+            }
+            .section-desc {
+                font-size: 0.8rem;
+                line-height: 1.55;
+                margin-bottom: 12px;
+            }
+
+            /* Hero compacto en móvil */
+            .hero-section {
+                padding: 28px 0 20px;
+            }
+            .hero-title {
+                font-size: 2.1rem;
+                line-height: 1.15;
+            }
+            .hero-desc {
+                font-size: 0.82rem;
+                line-height: 1.6;
+                margin-bottom: 22px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero-buttons button,
+            .hero-buttons a {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+            .hero-metrics {
+                gap: 14px;
+                margin: 20px auto 0;
+                padding-top: 16px;
+            }
+            .metric-num {
+                font-size: 1.35rem;
+            }
+            .metric-label {
+                font-size: 0.65rem;
+            }
+            .hero-bottle-card {
+                padding: 16px;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+            .hero-bottle-img-wrap {
+                height: 150px;
+            }
+
+            /* Garantías en cuadrícula compacta 2x2 sin párrafos largos */
+            .guarantees-section {
+                padding: 20px 0;
+            }
+            .guarantees-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            .guarantee-card {
+                padding: 12px 10px;
+                gap: 10px;
+                align-items: center;
+            }
+            .guarantee-icon {
+                width: 34px;
+                height: 34px;
+                min-width: 34px;
+            }
+            .guarantee-icon svg {
+                width: 18px;
+                height: 18px;
+            }
+            .guarantee-content h4 {
+                font-size: 0.78rem;
+                margin-bottom: 0;
+            }
+            .guarantee-content p {
+                display: none; /* Elimina texto secundario para reducir altura */
+            }
+
+            /* ── RESEÑAS EN LISTA SIN VISTA PREVIA (MÓVIL) ─────────────── */
+            .testimonials-section .section-wrap {
+                padding-top: 32px !important;
+                padding-bottom: 32px !important;
+            }
+            .testimonials-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+            .testimonial-card {
+                padding: 12px 14px;
+                border-radius: var(--radius-sm);
+                cursor: pointer;
+                transition: var(--transition-smooth);
+            }
+            .testimonial-card .t-stars {
+                font-size: 0.75rem;
+                letter-spacing: 1px;
+                margin-bottom: 2px;
+            }
+            .testimonial-card .t-author {
+                border-top: none;
+                padding-top: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+            .testimonial-card .t-name {
+                font-size: 0.85rem;
+                font-weight: 600;
+            }
+            .testimonial-card .t-city {
+                font-size: 0.65rem;
+            }
+            .testimonial-card .t-badge {
+                font-size: 0.62rem;
+                padding: 2px 7px;
+            }
+            /* Ocultar vista previa de la reseña en móvil por defecto */
+            .testimonial-card .t-quote {
+                display: none;
+                margin: 10px 0 2px;
+                padding-top: 8px;
+                border-top: 1px dashed var(--border-hairline);
+                font-size: 0.8rem;
+                line-height: 1.55;
+                color: var(--silver);
+            }
+            .testimonial-card.active .t-quote {
+                display: block;
+            }
+            .testimonial-card::after {
+                content: 'Ver opinión ▾';
+                display: block;
+                font-size: 0.65rem;
+                color: var(--gold);
+                text-align: right;
+                margin-top: 4px;
+                letter-spacing: 0.5px;
+            }
+            .testimonial-card.active::after {
+                content: 'Ocultar ▴';
+            }
+
+            /* ── BLOGS EN LISTA SIN VISTA PREVIA (MÓVIL) ───────────────── */
+            #homeBlogGrid,
+            #blogFullGrid,
+            .blog-grid {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 10px !important;
+            }
+            .blog-card {
+                flex-direction: row !important;
+                align-items: center !important;
+                padding: 10px 14px !important;
+                gap: 14px !important;
+                cursor: pointer;
+                background: var(--card);
+                border: 1px solid var(--border-hairline);
+                border-radius: var(--radius-sm);
+            }
+            .blog-card-img {
+                width: 72px !important;
+                height: 72px !important;
+                min-width: 72px !important;
+                border-radius: 6px !important;
+                flex-shrink: 0;
+            }
+            .blog-card-img img {
+                border-radius: 6px;
+            }
+            .blog-card-tag {
+                display: none !important; /* Ocultar badge grande sobre miniatura */
+            }
+            .blog-card-body {
+                padding: 0 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                flex-grow: 1 !important;
+                min-width: 0 !important;
+            }
+            .blog-card-date {
+                font-size: 0.62rem !important;
+                margin-bottom: 2px !important;
+                color: var(--gold) !important;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+            }
+            .blog-card-title {
+                font-size: 0.88rem !important;
+                line-height: 1.25 !important;
+                margin: 0 !important;
+                color: var(--white) !important;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 2 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+            }
+            /* SIN VISTA PREVIA: Ocultar extracto del artículo en móvil */
+            .blog-card-excerpt {
+                display: none !important;
+            }
+            .blog-card-link {
+                display: none !important;
+            }
+            .blog-card::after {
+                content: '→';
+                color: var(--gold);
+                font-size: 1.15rem;
+                margin-left: auto;
+                padding-left: 6px;
+                flex-shrink: 0;
+            }
+
+            /* Banner Árabe compacto */
+            .luxury-banner-section {
+                padding: 24px 0;
+            }
+            .luxury-banner-container {
+                padding: 24px 16px;
+            }
+            .luxury-banner-title {
+                font-size: 1.45rem;
+                line-height: 1.25;
+            }
+            .luxury-banner-desc {
+                font-size: 0.8rem;
+                line-height: 1.5;
+                margin-bottom: 14px;
+            }
+            .luxury-banner-perks {
+                flex-direction: column;
+                gap: 8px;
+                margin-bottom: 18px;
+            }
+            .perk-item {
+                font-size: 0.75rem;
+            }
+            .luxury-banner-actions {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .luxury-banner-actions button,
+            .luxury-banner-actions a {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* FAQ Accordion compacto */
+            .seo-faq-section {
+                margin-top: 36px;
+                padding-top: 28px;
+            }
+            .faq-accordion {
+                gap: 8px;
+            }
+            .faq-question {
+                padding: 13px 16px;
+                font-size: 0.88rem;
+            }
+            .faq-item.active .faq-answer {
+                padding: 0 16px 14px;
+                font-size: 0.8rem;
+            }
+
+            /* Modal de producto y navegación móvil */
             .modal-container { 
                 grid-template-columns: 1fr; 
                 max-height: 92vh;
             }
-            .modal-img-col { height: 240px; padding: 20px; }
-            .modal-info-col { padding: 28px 20px 80px; }
+            .modal-img-col { height: 230px; padding: 18px; }
+            .modal-info-col { padding: 24px 18px 80px; }
             .btn-modal-wa {
                 position: sticky;
                 bottom: 0;
-                margin-top: 24px;
+                margin-top: 20px;
                 z-index: 10;
                 box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.8);
             }
 
-            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-            .contact-info-pane { padding: 32px 20px; }
-            .blog-modal-body { padding: 24px 18px; }
+            .contact-layout { grid-template-columns: 1fr; gap: 20px; }
+            .contact-info-pane { padding: 24px 18px; }
+            .contact-map-pane { height: 240px; }
+            .blog-modal-body { padding: 20px 16px; }
+
+            .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
 
             /* Carrusel horizontal táctil para categorías olfativas */
             .tipo-simple-pills {
@@ -2473,14 +2755,6 @@
             .filter-pill {
                 white-space: nowrap;
                 flex-shrink: 0;
-            }
-
-            .luxury-banner-container {
-                padding: 32px 20px;
-            }
-            .luxury-banner-perks {
-                flex-direction: column;
-                gap: 10px;
             }
         }
 
@@ -3867,6 +4141,14 @@
                 }, 7500);
             }
         }, 3000);
+
+        // Interacción táctil para reseñas en móvil (expandir/colapsar opinión completa)
+        document.addEventListener('click', (e) => {
+            const tCard = e.target.closest('.testimonial-card');
+            if (tCard && window.innerWidth <= 768) {
+                tCard.classList.toggle('active');
+            }
+        });
     </script>
 </body>
 </html>
