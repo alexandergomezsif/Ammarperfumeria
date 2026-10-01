@@ -3496,12 +3496,28 @@
             border: 1px solid rgba(212, 175, 55, 0.35);
             border-radius: var(--radius-lg);
             width: 100%;
-            max-width: 620px;
+            max-width: 820px;
             padding: 36px 32px;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(212, 175, 55, 0.15);
             position: relative;
             max-height: 90vh;
             overflow-y: auto;
+        }
+
+        .quiz-progress-track {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 2px;
+            margin-bottom: 18px;
+            overflow: hidden;
+        }
+
+        .quiz-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+            border-radius: 2px;
+            transition: width 0.35s ease;
         }
 
         .quiz-modal-close {
@@ -3624,26 +3640,66 @@
 
         .quiz-match-cards {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 16px;
             margin: 20px 0 24px;
+            text-align: left;
         }
 
         .quiz-match-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.25);
             border-radius: var(--radius-md);
-            padding: 16px;
-            text-align: center;
+            padding: 16px 14px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: var(--transition-normal);
+        }
+
+        .quiz-match-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.12);
+            transform: translateY(-2px);
         }
 
         .quiz-match-card img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
             border-radius: var(--radius-sm);
             margin: 0 auto 10px;
             background: #14151b;
+        }
+
+        .badge-match-rank {
+            display: inline-block;
+            font-size: 0.64rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            align-self: flex-start;
+        }
+
+        .badge-match-rank.gold {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold-bright);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+        }
+
+        .badge-match-rank.silver {
+            background: rgba(192, 192, 192, 0.15);
+            color: #f0f0f0;
+            border: 1px solid rgba(192, 192, 192, 0.35);
+        }
+
+        .badge-match-rank.bronze {
+            background: rgba(205, 127, 50, 0.18);
+            color: #ffbe7a;
+            border: 1px solid rgba(205, 127, 50, 0.4);
         }
 
         .quiz-match-brand {
@@ -3655,17 +3711,81 @@
         }
 
         .quiz-match-name {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: var(--white);
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .quiz-match-price {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--gold-bright);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .quiz-match-inspiration {
+            font-size: 0.72rem;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 2px solid var(--gold);
+            padding: 6px 8px;
+            border-radius: 0 4px 4px 0;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .quiz-match-pitch {
+            font-size: 0.73rem;
+            color: var(--silver);
+            line-height: 1.45;
+            margin-bottom: 8px;
+            flex-grow: 1;
+        }
+
+        .quiz-match-longevity {
+            font-size: 0.68rem;
+            color: var(--dim);
+            margin-bottom: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 4px 6px;
+            border-radius: 4px;
+        }
+
+        .quiz-match-actions {
+            display: flex;
+            gap: 6px;
+            margin-top: auto;
+        }
+
+        .quiz-match-actions button {
+            flex: 1;
+            padding: 7px 6px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .btn-quiz-compare {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            color: var(--gold-bright);
+            padding: 11px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.78rem;
             font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             margin-bottom: 10px;
+            width: 100%;
+            transition: var(--transition-fast);
+        }
+
+        .btn-quiz-compare:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--gold);
         }
 
         .btn-match-view {
@@ -3699,7 +3819,7 @@
             justify-content: center;
             gap: 10px;
             text-decoration: none;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         /* ── INNOVACIÓN: MODAL COMPARADOR CARA A CARA ────────────────── */
@@ -4672,22 +4792,29 @@
         <div class="quiz-modal-container">
             <button class="quiz-modal-close" onclick="closeQuizModal()" aria-label="Cerrar test">✕</button>
             <div id="quizStepContainer">
-                <div class="quiz-step-indicator" id="quizStepIndicator">PASO 1 DE 3 · SOMMELIER AMMAR</div>
-                <h3 class="quiz-question-title" id="quizQuestionTitle">¿Para qué ocasión o momento buscas tu fragancia?</h3>
-                <p class="quiz-question-desc" id="quizQuestionDesc">Selecciona la situación donde más deseas destacar.</p>
+                <div class="quiz-progress-track">
+                    <div class="quiz-progress-fill" id="quizProgressFill" style="width: 20%;"></div>
+                </div>
+                <div class="quiz-step-indicator" id="quizStepIndicator">PASO 1 DE 5 · SOMMELIER AMMAR</div>
+                <h3 class="quiz-question-title" id="quizQuestionTitle">¿Para quién buscas la fragancia y qué presencia deseas reflejar?</h3>
+                <p class="quiz-question-desc" id="quizQuestionDesc">Define el perfil y la presencia olfativa inicial.</p>
                 <div class="quiz-options-grid" id="quizOptionsGrid"></div>
                 <div class="quiz-nav-row">
                     <button class="btn-quiz-back" id="btnQuizBack" onclick="prevQuizStep()" style="display:none;">← Volver al paso anterior</button>
+                    <span style="font-size:0.7rem; color:var(--dim); letter-spacing:0.5px;">Asesoría Experta de Ventas AMMAR</span>
                 </div>
             </div>
             <div class="quiz-results-container" id="quizResultsContainer">
-                <span class="quiz-step-indicator">✨ MATCH OLFATIVO ENCONTRADO</span>
-                <h3 class="quiz-question-title">Tu Firma Olfativa Recomendada</h3>
-                <p class="quiz-question-desc" id="quizMatchSummary">Basado en tus preferencias de uso y estilo.</p>
+                <span class="quiz-step-indicator">✨ DIAGNÓSTICO DEL SOMMELIER OLFATIVO</span>
+                <h3 class="quiz-question-title">Tus 3 Fragancias Ideales</h3>
+                <p class="quiz-question-desc" id="quizMatchSummary">Basado en tu ocasión, acorde favorito, fijación esperada e inspiración de lujo.</p>
                 <div class="quiz-match-cards" id="quizMatchCards"></div>
+                <button class="btn-quiz-compare" id="btnQuizCompare" style="display:none;" onclick="compareTopQuizMatches()">
+                    <span>⚖️ Comparar Match #1 vs Match #2 en Duelo Olfativo</span>
+                </button>
                 <a href="#" target="_blank" rel="noopener noreferrer" class="btn-quiz-wa" id="btnQuizWa">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                    Consultar este Match con Karen por WhatsApp
+                    Pedir Asesoría VIP y Confirmar Disponibilidad por WhatsApp
                 </a>
                 <button class="btn-match-view" onclick="restartQuiz()" style="margin-top:8px;">Repetir Test ↻</button>
             </div>
@@ -5431,47 +5558,114 @@
             }
         }
 
-        // ── SOMMELIER OLFATIVO VIRTUAL ────────────────────────────────
+        // ── SOMMELIER OLFATIVO VIRTUAL (CONSULTORÍA BASADA EN EXCEL Y VENTAS) ──
         const QUIZ_QUESTIONS = [
             {
-                title: "¿Para qué ocasión o momento buscas tu fragancia?",
-                desc: "Selecciona el escenario principal donde deseas causar mayor impacto.",
+                title: "¿Para quién buscas la fragancia y qué presencia deseas reflejar?",
+                desc: "Define el perfil y la presencia olfativa inicial.",
                 options: [
-                    { icon: "🌞", label: "Sol & Medellín Día a Día", desc: "Clima templado, salidas casuales, frescura y pulcritud", key: "dia" },
-                    { icon: "🌙", label: "Citas, Noche & Romance", desc: "Seducción, cenas especiales, eventos nocturnos o fiesta", key: "noche" },
-                    { icon: "💼", label: "Oficina, Negocios & Éxito", desc: "Elegancia profesional, reuniones y presencia ejecutiva", key: "oficina" },
-                    { icon: "👑", label: "Joyas Árabes & Opulencia", desc: "Exclusividad de Dubai, maderas ricas y estela distinguida", key: "arabe" }
+                    { icon: "🎩", label: "Caballero", desc: "Masculinidad atractiva, pulcra, magnética o imponente", key: "Caballero" },
+                    { icon: "🌸", label: "Dama", desc: "Feminidad cautivadora, sensual, sofisticada o dulce", key: "Dama" },
+                    { icon: "💎", label: "Unisex / Sin Etiquetas", desc: "Aromas vanguardistas y de autor para cualquier persona", key: "Unisex" }
                 ]
             },
             {
-                title: "¿Qué intensidad y vibra prefieres proyectar?",
-                desc: "Define el carácter aromático que mejor acompaña tu personalidad.",
+                title: "¿En qué momento u ocasión planeas usarla con mayor frecuencia?",
+                desc: "El entorno determina la concentración, estela y comportamiento de las notas.",
                 options: [
-                    { icon: "🌊", label: "Fresca, Marina y Cítrica", desc: "Limpia, energizante, con sensación de recién duchado", key: "fresco" },
-                    { icon: "🍯", label: "Dulce, Vainilla & Gourmand", desc: "Envolvente, cálida, con acordes de vainilla, frutas o praliné", key: "dulce" },
-                    { icon: "🪵", label: "Amaderada, Cuero & Especiada", desc: "Personalidad imponente, maderas nobles, oud o especias", key: "amaderado" },
-                    { icon: "⚡", label: "Modo Bestia (12h+ Duración)", desc: "Proyección masiva que llene la habitación y dure todo el día", key: "bestia" }
+                    { icon: "🌞", label: "Sol & Medellín Diario (Firma Diurna)", desc: "Clima templado, salidas casuales, día a día fresco y pulcro", key: "dia" },
+                    { icon: "🌙", label: "Citas, Noche, Fiesta & Seducción", desc: "Cenas románticas, rumba, discoteca y conquista nocturna", key: "noche" },
+                    { icon: "💼", label: "Oficina, Negocios & Liderazgo", desc: "Reuniones de trabajo, estatus profesional y elegancia ejecutiva", key: "oficina" },
+                    { icon: "👑", label: "Galas, Alta Distinción & Eventos VIP", desc: "Ocasiones memorables donde exiges una estela opulenta e imborrable", key: "gala" }
                 ]
             },
             {
-                title: "¿Para quién es la fragancia?",
-                desc: "Selecciona el perfil de uso para afinar el match.",
+                title: "¿Qué acordes o sensaciones te cautivan más al oler un perfume?",
+                desc: "Selecciona el ADN aromático que más despierta tus sentidos.",
                 options: [
-                    { icon: "🎩", label: "Caballero", desc: "Perfiles masculinos sofisticados o modernos", key: "Caballero" },
-                    { icon: "🌸", label: "Dama", desc: "Perfiles femeninos elegantes, dulces o radiantes", key: "Dama" },
-                    { icon: "✨", label: "Unisex / Compartida", desc: "Aromas vanguardistas y nicho para cualquier persona", key: "Unisex" }
+                    { icon: "🌊", label: "Cítrica, Marina & Acuática (Ultra Fresca)", desc: "Sensación de recién duchado, limón, menta, brisa marina y bergamota", key: "acuatico_citrico" },
+                    { icon: "🍯", label: "Gourmand Adictiva, Vainilla & Caramelo", desc: "Notas dulces y tentadoras: praliné, canela, manzana horneada o crema batida", key: "gourmand_dulce" },
+                    { icon: "🪵", label: "Maderas Nobles, Cuero & Resinas de Oud", desc: "Oscuro, terroso, imponente y misterioso: sándalo, cedro y maderas ricas", key: "maderas_cuero" },
+                    { icon: "☕", label: "Especiada Cálida, Café & Dátiles Orientales", desc: "Calidez envolvente: cardamomo, café arábica, nuez moscada y ámbar", key: "especias_cafe" },
+                    { icon: "💐", label: "Floral Cautivador & Frutal Jugoso", desc: "Flores blancas, rosa aterciopelada, lichi, durazno y frutos rojos sensuales", key: "floral_frutal" }
+                ]
+            },
+            {
+                title: "¿Qué nivel de estela y duración esperas en tu piel y ropa?",
+                desc: "Desde elegancia íntima de oficina hasta proyección masiva de discoteca.",
+                options: [
+                    { icon: "⏱️", label: "Burbuja Íntima & Discreta (6 a 8 horas)", desc: "Pulcritud personal que se siente al acercarse; sofisticada y sin saturar", key: "moderada" },
+                    { icon: "🔥", label: "Gran Estela & Imán de Cumplidos (8 a 12 horas)", desc: "Que las personas a tu alrededor noten tu presencia y pregunten qué llevas", key: "alta" },
+                    { icon: "⚡", label: "Modo Bestia / Bomba Nuclear (12h+ y días en ropa)", desc: "Máxima potencia que llene la habitación y dure todo el día (Perfil Árabe / Nicho)", key: "bestia" }
+                ]
+            },
+            {
+                title: "¿Qué estilo de perfumería o referente de lujo te atrae más?",
+                desc: "Alineamos tu elección con las tendencias y formulaciones maestras.",
+                options: [
+                    { icon: "👑", label: "Joyas Árabes de Dubai (Lattafa, Afnan, Armaf)", desc: "El fenómeno de oriente: aceites concentrados, alta fijación y lujo accesible", key: "arabes" },
+                    { icon: "🏛️", label: "Íconos de Diseñador Occidentales", desc: "ADN prestigioso inspirado en Dior, Chanel, Armani, JPG o Carolina Herrera", key: "designer" },
+                    { icon: "💎", label: "Perfumería Nicho de Alta Gama (Exclusiva)", desc: "Inspiraciones en Baccarat Rouge, Xerjoff Erba Pura, Aventus o Kilian", key: "nicho" },
+                    { icon: "✨", label: "Sorpréndeme con la Mejor Relación Cumplidos/Precio", desc: "El algoritmo seleccionará la mejor fórmula según tus respuestas anteriores", key: "balance" }
                 ]
             }
         ];
 
         let quizCurrentStep = 0;
         let quizAnswers = {};
+        let lastTopQuizMatches = [];
+
+        function getFragranceInspirationTag(p) {
+            const pitch = p.pitch || '';
+            const brand = p.marca || '';
+            const name = p.nombre || '';
+
+            if (pitch.includes('Bleu de Chanel') || pitch.includes('YSL Y')) return 'Inspirado en el ADN de Bleu de Chanel & YSL Y';
+            if (pitch.includes('Ultra Male')) return 'Clon mejorado del icónico Ultra Male (Jean Paul Gaultier)';
+            if (pitch.includes('Baccarat Rouge 540') || pitch.includes('Baccarat Rouge')) return 'Alternativa de alta gama a Baccarat Rouge 540';
+            if (pitch.includes('Coco Mademoiselle')) return 'Alternativa directa a Coco Mademoiselle (Chanel)';
+            if (pitch.includes('Scandal') && brand === 'Armaf') return 'Alternativa directa a Scandal Pour Homme (JPG)';
+            if (pitch.includes('Erba Pura')) return 'ADN frutal y almizclado inspirado en Erba Pura (Xerjoff)';
+            if (pitch.includes('Sauvage Elixir')) return 'Alternativa económica a Dior Sauvage Elixir';
+            if (pitch.includes('Atomic Rose')) return 'Clon magistral de Atomic Rose (Initio)';
+            if (pitch.includes('Oud for Greatness') || pitch.includes('Oud For Greatness')) return 'Clon exacto de Oud for Greatness (Initio)';
+            if (pitch.includes('Eden Juicy Apple')) return 'Inspirado en Eden Juicy Apple (Kayali)';
+            if (pitch.includes('Bianco Latte')) return 'Clon viral del codiciado Bianco Latte';
+            if (pitch.includes('Armani Code') || pitch.includes('Tuxedo')) return 'Nivel olfativo de Armani Code & YSL Tuxedo';
+            if (pitch.includes("Angels' Share")) return "Inspirado en la joya licorosa Angels' Share (Kilian)";
+            if (pitch.includes('Oriana')) return 'Reminiscencias gourmand a Oriana (Parfums de Marly)';
+            if (pitch.includes('Kirke')) return 'Inspirado en la opulencia de Kirke y Erba Pura';
+            if (brand === 'Creed' && name === 'Aventus') return 'La fragancia nicho más codiciada del mundo';
+            if (brand === 'Initio') return 'Perfumería nicho de altísimo impacto y estatus';
+            if (brand === 'Louis Vuitton') return 'Opulencia, cuero oscuro y poder de Louis Vuitton';
+            if (brand === 'Montale' && name === 'Arabians Tonka') return 'La bestia absoluta del rendimiento (Azúcar y Oud)';
+            if (brand === 'Lattafa' && name.includes('Yara')) return 'El fenómeno árabe viral: batido cremoso y dulce';
+            if (brand === 'Chanel') return 'El estándar de oro de la elegancia parisina';
+            if (brand === 'Dior' && name.includes('Sauvage')) return 'El rey mundial de los cumplidos masculinos';
+            if (brand === 'Jean Paul Gaultier' && name.includes('Le Beau')) return 'Sensualidad tropical masculina (Coco y Vainilla)';
+            if (brand === 'Carolina Herrera' && name.includes('Good Girl')) return 'El ícono definitivo de la seducción nocturna';
+            if (brand === 'Armani' && name.includes('Profondo')) return 'La referencia suprema de frescura marina masculina';
+
+            const isArabe = ['Lattafa', 'Afnan', 'Armaf', 'Orientica', 'Bharara'].includes(brand);
+            if (isArabe) return `Joya de alta concentración de la perfumería árabe (${brand})`;
+            return `Formulación prestigiosa de diseñador (${brand})`;
+        }
+
+        function getSalesPitchExcerpt(p) {
+            if (!p.pitch) return 'Fragancia distinguida de gran proyección y alta fijación.';
+            const sentences = p.pitch.split(/(?<=[.?!])\s+/);
+            if (sentences.length >= 2) {
+                return `${sentences[0]} ${sentences[1]}`;
+            }
+            return sentences[0];
+        }
 
         function openQuizModal() {
             const modal = document.getElementById('quizModal');
             if (!modal) return;
             quizCurrentStep = 0;
             quizAnswers = {};
+            lastTopQuizMatches = [];
             document.getElementById('quizStepContainer').style.display = 'block';
             document.getElementById('quizResultsContainer').classList.remove('active');
             renderQuizStep();
@@ -5489,7 +5683,13 @@
             const q = QUIZ_QUESTIONS[quizCurrentStep];
             if (!q) return;
 
-            document.getElementById('quizStepIndicator').textContent = `PASO ${quizCurrentStep + 1} DE 3 · SOMMELIER AMMAR`;
+            const totalSteps = QUIZ_QUESTIONS.length;
+            const progressPercent = Math.round(((quizCurrentStep + 1) / totalSteps) * 100);
+
+            const progressFill = document.getElementById('quizProgressFill');
+            if (progressFill) progressFill.style.width = `${progressPercent}%`;
+
+            document.getElementById('quizStepIndicator').textContent = `PASO ${quizCurrentStep + 1} DE ${totalSteps} · SOMMELIER AMMAR`;
             document.getElementById('quizQuestionTitle').textContent = q.title;
             document.getElementById('quizQuestionDesc').textContent = q.desc;
 
@@ -5503,8 +5703,10 @@
             grid.innerHTML = q.options.map(opt => `
                 <div class="quiz-option-card ${quizAnswers[quizCurrentStep] === opt.key ? 'selected' : ''}" onclick="selectQuizOption('${opt.key}')">
                     <div class="quiz-option-icon">${opt.icon}</div>
-                    <div class="quiz-option-title">${opt.label}</div>
-                    <div class="quiz-option-desc">${opt.desc}</div>
+                    <div class="quiz-option-info">
+                        <h4>${opt.label}</h4>
+                        <p>${opt.desc}</p>
+                    </div>
                 </div>
             `).join('');
         }
@@ -5530,91 +5732,205 @@
             openQuizModal();
         }
 
+        function compareTopQuizMatches() {
+            if (!lastTopQuizMatches || lastTopQuizMatches.length < 2) return;
+            const p1 = lastTopQuizMatches[0];
+            const p2 = lastTopQuizMatches[1];
+            closeQuizModal();
+            setTimeout(() => {
+                openCompareModal(p1.id, p2.id);
+            }, 100);
+        }
+
         function calculateQuizResult() {
-            const occasion = quizAnswers[0] || 'dia';
-            const vibe = quizAnswers[1] || 'fresco';
-            const gender = quizAnswers[2] || 'Caballero';
+            const gender = quizAnswers[0] || 'Caballero';
+            const occasion = quizAnswers[1] || 'dia';
+            const sensation = quizAnswers[2] || 'acuatico_citrico';
+            const performance = quizAnswers[3] || 'alta';
+            const inspiration = quizAnswers[4] || 'balance';
 
             let scored = PRODUCTS.map(p => {
                 let score = 0;
-                const isArabe = ['Lattafa', 'Afnan', 'Armaf', 'Orientica', 'Bharara'].includes(p.marca);
+                const marca = p.marca;
+                const nombre = p.nombre;
+                const p_gender = p.genero;
+                const tipo = p.tipo_simple || '';
+                const familia = (p.familia || '').toLowerCase();
+                const notas = (p.notas || '').toLowerCase();
+                const pitch = (p.pitch || '').toLowerCase();
+                const is_arabe = ['Lattafa', 'Afnan', 'Armaf', 'Orientica', 'Bharara'].includes(marca);
 
-                // Género
-                if (gender === 'Unisex') {
-                    if (p.genero === 'Unisex') score += 5;
-                    else score += 2;
+                // 1. Género
+                if (gender === 'Caballero') {
+                    if (p_gender === 'Caballero') score += 22;
+                    else if (p_gender === 'Unisex') score += 12;
+                    else score -= 25;
+                } else if (gender === 'Dama') {
+                    if (p_gender === 'Dama') score += 22;
+                    else if (p_gender === 'Unisex') score += 12;
+                    else score -= 25;
                 } else {
-                    if (p.genero === gender) score += 5;
-                    else if (p.genero === 'Unisex') score += 3;
-                    else score -= 4;
+                    if (p_gender === 'Unisex') score += 22;
+                    else score += 10;
                 }
 
-                // Ocasión
-                if (occasion === 'arabe') {
-                    if (isArabe) score += 6;
-                } else if (occasion === 'dia') {
-                    if (p.tipo_simple.includes('Frescas') || p.familia.toLowerCase().includes('acuática') || p.familia.toLowerCase().includes('cítrica')) score += 5;
-                    if (['9am Dive', 'Acqua di Gio Profondo', 'Light Blue', 'L1212 Blanc'].some(n => p.nombre.includes(n))) score += 4;
+                // 2. Ocasión
+                if (occasion === 'dia') {
+                    if (tipo.includes('Frescas') || familia.includes('acuática') || familia.includes('cítrica')) score += 15;
+                    if (['día a día', 'clima cálido', 'fresca', 'limpio', 'duchado', 'versátil', 'verano'].some(k => pitch.includes(k))) score += 10;
                 } else if (occasion === 'noche') {
-                    if (p.tipo_simple.includes('Dulces') || p.tipo_simple.includes('Especiadas')) score += 5;
-                    if (['9pm', 'Khamrah', 'Good Girl', 'Scandal', '212 VIP Black'].some(n => p.nombre.includes(n))) score += 4;
+                    if (tipo.includes('Dulces') || tipo.includes('Especiadas') || familia.includes('ámbar')) score += 15;
+                    if (['noche', 'fiesta', 'citas', 'seductor', 'discoteca', 'conquista', 'sensual', 'nocturno'].some(k => pitch.includes(k))) score += 10;
                 } else if (occasion === 'oficina') {
-                    if (p.tipo_simple.includes('Amaderadas') || ['Boss Bottled', 'Coco Mademoiselle', 'Club de Nuit Woman', 'His Confession', 'Silver Mountain Water'].some(n => p.nombre.includes(n))) score += 5;
+                    if (tipo.includes('Amaderadas') || tipo.includes('Frescas')) score += 14;
+                    if (['oficina', 'profesional', 'reuniones', 'ejecutivo', 'elegante', 'confiable', 'trabajo'].some(k => pitch.includes(k))) score += 10;
+                } else if (occasion === 'gala') {
+                    if (is_arabe || ['Initio', 'Montale', 'Creed', 'Louis Vuitton', 'Chanel', 'Dior'].includes(marca)) score += 14;
+                    if (['lujo', 'gala', 'opulencia', 'exclusivo', 'presencia', 'distinguido', 'status', 'millonario'].some(k => pitch.includes(k))) score += 10;
                 }
 
-                // Vibe
-                if (vibe === 'fresco') {
-                    if (p.tipo_simple.includes('Frescas') || p.familia.toLowerCase().includes('acuática') || p.familia.toLowerCase().includes('cítrica')) score += 6;
-                } else if (vibe === 'dulce') {
-                    if (p.tipo_simple.includes('Dulces') || p.familia.toLowerCase().includes('vainilla') || p.familia.toLowerCase().includes('gourmand')) score += 6;
-                } else if (vibe === 'amaderado') {
-                    if (p.tipo_simple.includes('Amaderadas') || p.tipo_simple.includes('Especiadas')) score += 6;
-                } else if (vibe === 'bestia') {
-                    if (isArabe || ['Arabians Tonka', 'Oud For Greatness', 'Ombre Nomade', 'Khamrah', 'Asad', '9pm'].some(n => p.nombre.includes(n))) score += 6;
+                // 3. Sensación Olfativa
+                if (sensation === 'acuatico_citrico') {
+                    if (tipo.includes('Frescas') || familia.includes('cítrica') || familia.includes('acuática')) score += 20;
+                    if (['limón', 'bergamota', 'menta', 'marina', 'toronja', 'naranja', 'acuática'].some(n => notas.includes(n))) score += 10;
+                } else if (sensation === 'gourmand_dulce') {
+                    if (tipo.includes('Dulces') || familia.includes('vainilla') || familia.includes('gourmand')) score += 20;
+                    if (['vainilla', 'caramelo', 'praliné', 'coco', 'azúcar', 'haba tonka', 'miel'].some(n => notas.includes(n))) score += 10;
+                } else if (sensation === 'maderas_cuero') {
+                    if (tipo.includes('Amaderadas')) score += 20;
+                    if (['oud', 'cuero', 'sándalo', 'cedro', 'incienso', 'vetiver', 'pachulí'].some(n => notas.includes(n))) score += 10;
+                } else if (sensation === 'especias_cafe') {
+                    if (tipo.includes('Especiadas') || familia.includes('ámbar') || familia.includes('oriental')) score += 20;
+                    if (['canela', 'café', 'cardamomo', 'nuez moscada', 'pimienta', 'dátiles'].some(n => notas.includes(n))) score += 10;
+                } else if (sensation === 'floral_frutal') {
+                    if (tipo.includes('Florales') || familia.includes('floral') || familia.includes('frutal')) score += 20;
+                    if (['rosa', 'jazmín', 'nardo', 'frutas', 'manzana', 'durazno', 'frambuesa', 'lichi'].some(n => notas.includes(n))) score += 10;
                 }
 
-                if (p.destacado) score += 1;
+                // 4. Rendimiento
+                if (performance === 'bestia') {
+                    if (is_arabe || ['Arabians Tonka', 'Oud For Greatness', 'Ombre Nomade', 'Khamrah', 'Asad', '9pm', 'King', 'Starry Nights'].some(n => nombre.includes(n))) score += 18;
+                    if (['bestia', 'proyección bestial', 'dura días', 'llenar una habitación', 'estela masiva'].some(k => pitch.includes(k))) score += 10;
+                } else if (performance === 'alta') {
+                    score += 10;
+                } else if (performance === 'moderada') {
+                    if (!is_arabe && tipo.includes('Frescas')) score += 12;
+                }
+
+                // 5. Inspiración de Marca
+                if (inspiration === 'arabes') {
+                    if (is_arabe) score += 16;
+                } else if (inspiration === 'designer') {
+                    if (!is_arabe && ['Dior', 'Chanel', 'Armani', 'Jean Paul Gaultier', 'Carolina Herrera', 'Hugo Boss', 'Lacoste', 'Moschino', 'Lancome'].includes(marca)) score += 16;
+                } else if (inspiration === 'nicho') {
+                    if (['Creed', 'Initio', 'Montale', 'Parfums de Marly', 'Louis Vuitton', 'Le Labo'].includes(marca) || ['clon', 'inspirado en', 'baccarat', 'erba pura', 'angels', 'bianco latte'].some(k => pitch.includes(k))) score += 16;
+                } else if (inspiration === 'balance') {
+                    if (p.destacado) score += 6;
+                }
+
+                if (p.destacado) score += 3;
                 return { product: p, score };
             });
 
             scored.sort((a, b) => b.score - a.score);
-            const topMatches = scored.slice(0, 2).map(s => s.product);
+            lastTopQuizMatches = scored.slice(0, 3).map(s => s.product);
 
             document.getElementById('quizStepContainer').style.display = 'none';
             const resultsContainer = document.getElementById('quizResultsContainer');
             resultsContainer.classList.add('active');
 
+            const rankConfigs = [
+                { badgeClass: 'gold', badgeText: '👑 98% AFINIDAD · TU FIRMA IDEAL' },
+                { badgeClass: 'silver', badgeText: '🔥 94% AFINIDAD · IMÁN DE CUMPLIDOS' },
+                { badgeClass: 'bronze', badgeText: '💎 90% AFINIDAD · JOYA ESTRATÉGICA' }
+            ];
+
             const matchCards = document.getElementById('quizMatchCards');
             if (matchCards) {
-                matchCards.innerHTML = topMatches.map((p, idx) => `
-                    <div class="quiz-match-card">
-                        <span class="badge-match">${idx === 0 ? '★ Recomendación Principal' : '✨ Alternativa Destacada'}</span>
-                        <img src="${p.imagen}" alt="${p.nombre}" class="quiz-match-img" onerror="this.src='https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80'">
-                        <div class="quiz-match-brand">${p.marca}</div>
-                        <div class="quiz-match-name">${p.nombre}</div>
-                        <div class="quiz-match-price">${formatCOP(p.precio)} COP</div>
-                        <div class="quiz-match-notes"><strong>Notas:</strong> ${p.notas}</div>
-                        <div class="quiz-match-actions">
-                            <button class="btn-match-view" onclick="closeQuizModal(); openProductModal(${p.id})">Ver en Catálogo</button>
-                            <button class="btn-card-bag ${isItemInCart(p.id) ? 'in-cart' : ''}" onclick="toggleCartItem(${p.id})">${isItemInCart(p.id) ? '✓ En Bolsa' : '+ Añadir a Bolsa'}</button>
+                matchCards.innerHTML = lastTopQuizMatches.map((p, idx) => {
+                    const rank = rankConfigs[idx] || rankConfigs[2];
+                    const inspTag = getFragranceInspirationTag(p);
+                    const pitchExcerpt = getSalesPitchExcerpt(p);
+                    const longevity = getProductLongevity(p);
+                    const inCart = isItemInCart(p.id);
+
+                    return `
+                        <div class="quiz-match-card">
+                            <span class="badge-match-rank ${rank.badgeClass}">${rank.badgeText}</span>
+                            <img src="${p.imagen}" alt="${p.nombre}" onerror="this.src='https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80'">
+                            <div class="quiz-match-brand">${p.marca}</div>
+                            <div class="quiz-match-name">${p.nombre}</div>
+                            <div class="quiz-match-price">${formatCOP(p.precio)} COP</div>
+                            
+                            <div class="quiz-match-inspiration">
+                                <strong>ADN Olfativo:</strong> ${inspTag}
+                            </div>
+                            
+                            <div class="quiz-match-pitch">
+                                <em>"${pitchExcerpt}"</em>
+                            </div>
+
+                            <div class="quiz-match-longevity">
+                                ⏱️ ${longevity}
+                            </div>
+
+                            <div class="quiz-match-actions">
+                                <button class="btn-match-view" onclick="closeQuizModal(); openProductModal(${p.id})">Ver Ficha</button>
+                                <button class="btn-card-bag ${inCart ? 'in-cart' : ''}" onclick="toggleCartItem(${p.id})">${inCart ? '✓ En Bolsa' : '+ Bolsa'}</button>
+                            </div>
                         </div>
-                    </div>
-                `).join('');
+                    `;
+                }).join('');
             }
 
-            const p1 = topMatches[0];
-            const p2 = topMatches[1];
-            const occasionLabels = { dia: "Sol & Medellín Día a Día", noche: "Citas & Noche", oficina: "Oficina & Negocios", arabe: "Joyas Árabes (Dubai)" };
-            const vibeLabels = { fresco: "Fresco / Limpio", dulce: "Dulce / Gourmand", amaderado: "Amaderado / Oscuro", bestia: "Modo Bestia 12h+" };
-            
-            let textWa = `¡Hola Karen! Hice el Test del Sommelier Olfativo en AMMAR Perfumería:\n`;
-            textWa += `🎯 Ocasión: ${occasionLabels[occasion] || occasion}\n`;
-            textWa += `✨ Estilo: ${vibeLabels[vibe] || vibe}\n`;
-            textWa += `👤 Preferencia: ${gender}\n\n`;
-            textWa += `Mis matches recomendados fueron:\n`;
-            if (p1) textWa += `1. ${p1.nombre} (${p1.marca} - ${formatCOP(p1.precio)} COP)\n   🔗 ${getProductShareUrl(p1.id)}\n`;
-            if (p2) textWa += `2. ${p2.nombre} (${p2.marca} - ${formatCOP(p2.precio)} COP)\n   🔗 ${getProductShareUrl(p2.id)}\n`;
-            textWa += `\n¿Me cuentas si los tienen disponibles para entrega inmediata en Medellín?`;
+            const btnQuizCompare = document.getElementById('btnQuizCompare');
+            if (btnQuizCompare) {
+                btnQuizCompare.style.display = lastTopQuizMatches.length >= 2 ? 'flex' : 'none';
+            }
+
+            // Mensaje de WhatsApp
+            const occasionLabels = {
+                dia: "Sol & Medellín Diario (Firma Diurna)",
+                noche: "Citas, Noche, Fiesta & Seducción",
+                oficina: "Oficina, Negocios & Liderazgo",
+                gala: "Galas, Alta Distinción & Eventos VIP"
+            };
+            const sensationLabels = {
+                acuatico_citrico: "Cítrica, Marina & Acuática",
+                gourmand_dulce: "Gourmand Adictiva, Vainilla & Caramelo",
+                maderas_cuero: "Maderas Nobles, Cuero & Oud",
+                especias_cafe: "Especiada Cálida, Café & Dátiles",
+                floral_frutal: "Floral Cautivador & Frutal Jugoso"
+            };
+            const perfLabels = {
+                moderada: "Burbuja Íntima & Discreta (6-8h)",
+                alta: "Gran Estela & Cumplidos (8-12h)",
+                bestia: "Modo Bestia / Bomba Nuclear (12h+)"
+            };
+            const inspLabels = {
+                arabes: "Joyas Árabes de Dubai (Lattafa, Afnan, Armaf)",
+                designer: "Íconos de Diseñador Occidentales",
+                nicho: "Perfumería Nicho de Alta Gama",
+                balance: "Mejor Relación Cumplidos/Precio"
+            };
+
+            let textWa = `¡Hola Karen! Acabo de realizar el Test del Sommelier Olfativo en AMMAR Perfumería y obtuve mi diagnóstico:\n\n`;
+            textWa += `📋 MI PERFIL:\n`;
+            textWa += `• Preferencia: ${gender}\n`;
+            textWa += `• Ocasión: ${occasionLabels[occasion] || occasion}\n`;
+            textWa += `• Acorde Favorito: ${sensationLabels[sensation] || sensation}\n`;
+            textWa += `• Duración Deseada: ${perfLabels[performance] || performance}\n`;
+            textWa += `• Estilo de Perfumería: ${inspLabels[inspiration] || inspiration}\n\n`;
+            textWa += `✨ MIS 3 MATCHES RECOMENDADOS:\n`;
+
+            lastTopQuizMatches.forEach((p, idx) => {
+                const insp = getFragranceInspirationTag(p);
+                textWa += `${idx + 1}️⃣ ${p.nombre} - ${p.marca} (${formatCOP(p.precio)} COP)\n`;
+                textWa += `   ✨ ${insp}\n`;
+                textWa += `   🔗 ${getProductShareUrl(p.id)}\n\n`;
+            });
+
+            textWa += `¿Me podrías confirmar si los tienen disponibles para entrega inmediata en Medellín y servicio contraentrega?`;
 
             const btnWa = document.getElementById('btnQuizWa');
             if (btnWa) {
