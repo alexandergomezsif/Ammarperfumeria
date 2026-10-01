@@ -3008,6 +3008,841 @@
             font-family: var(--font-heading);
             font-size: 1.5rem;
         }
+
+        /* ── INNOVACIÓN: FILTROS POR OCASIÓN Y ESTILO DE VIDA ────── */
+        .occasion-filter-box {
+            background: rgba(212, 175, 55, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            border-radius: var(--radius-md);
+            padding: 12px 16px;
+            margin-bottom: 14px;
+        }
+
+        .occasion-filter-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .occasion-filter-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--gold-bright);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .occasion-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pill-occasion {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--silver);
+            padding: 7px 14px;
+            border-radius: var(--radius-pill);
+            font-size: 0.76rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-occasion:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .pill-occasion.active {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.25), rgba(184, 134, 11, 0.15));
+            border-color: var(--gold);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+            font-weight: 600;
+        }
+
+        /* ── INNOVACIÓN: BANNER SOMMELIER VIRTUAL ─────────────────────── */
+        .sommelier-banner {
+            background: linear-gradient(135deg, rgba(22, 23, 29, 0.95), rgba(10, 11, 14, 0.98));
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sommelier-banner::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.15), transparent 70%);
+            pointer-events: none;
+        }
+
+        .sommelier-banner-text h3 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            color: var(--white);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sommelier-banner-text h3 span {
+            color: var(--gold-bright);
+        }
+
+        .sommelier-banner-text p {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .btn-sommelier-trigger {
+            background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: var(--transition-smooth);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 6px 18px rgba(212, 175, 55, 0.3);
+            flex-shrink: 0;
+        }
+
+        .btn-sommelier-trigger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+            background: linear-gradient(135deg, #f3cf55 0%, #c49914 100%);
+        }
+
+        /* ── INNOVACIÓN: BOTÓN BOLSA EN TARJETAS Y MODAL ────────────── */
+        .btn-card-bag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            color: var(--silver);
+            padding: 8px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 0.72rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .btn-card-bag:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .btn-card-bag.in-cart {
+            background: rgba(212, 175, 55, 0.18);
+            border-color: var(--gold);
+            color: var(--gold-bright);
+        }
+
+        .btn-modal-bag {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            color: var(--gold-bright);
+            padding: 11px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .btn-modal-bag:hover {
+            background: rgba(212, 175, 55, 0.18);
+            border-color: var(--gold);
+        }
+
+        .btn-modal-bag.in-cart {
+            background: rgba(212, 175, 55, 0.28);
+            color: #fff;
+        }
+
+        .btn-modal-compare {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            color: var(--silver);
+            padding: 11px 18px;
+            border-radius: var(--radius-sm);
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition-smooth);
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .btn-modal-compare:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ── INNOVACIÓN: BOTÓN FLOTANTE DE BOLSA DE COTIZACIÓN ───────── */
+        .bag-floating-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 550;
+            background: linear-gradient(135deg, #181920 0%, #0c0d11 100%);
+            border: 1.5px solid var(--gold);
+            color: var(--gold-bright);
+            padding: 12px 20px;
+            border-radius: var(--radius-pill);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.25);
+            display: none;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .bag-floating-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.9), 0 0 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .bag-floating-count {
+            background: var(--gold);
+            color: #000;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+
+        /* ── INNOVACIÓN: DRAWER / BANDEJA DE BOLSA ───────────────────── */
+        .bag-drawer-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: none;
+            justify-content: flex-end;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .bag-drawer-overlay.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .bag-drawer {
+            background: #090a0d;
+            border-left: 1px solid rgba(212, 175, 55, 0.25);
+            width: 100%;
+            max-width: 440px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: -15px 0 50px rgba(0, 0, 0, 0.9);
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .bag-drawer-overlay.open .bag-drawer {
+            transform: translateX(0);
+        }
+
+        .bag-drawer-header {
+            padding: 22px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .bag-drawer-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bag-drawer-close {
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 1.4rem;
+            cursor: pointer;
+            padding: 4px;
+            transition: color 0.2s;
+        }
+
+        .bag-drawer-close:hover {
+            color: var(--white);
+        }
+
+        .bag-items-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .bag-empty-msg {
+            text-align: center;
+            color: var(--muted);
+            padding: 40px 20px;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        .bag-item-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+        }
+
+        .bag-item-img {
+            width: 54px;
+            height: 54px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            background: #121318;
+            flex-shrink: 0;
+        }
+
+        .bag-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .bag-item-brand {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .bag-item-name {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--white);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .bag-item-price {
+            font-size: 0.8rem;
+            color: var(--silver);
+            font-weight: 500;
+        }
+
+        .bag-item-remove {
+            background: none;
+            border: none;
+            color: var(--muted);
+            cursor: pointer;
+            padding: 6px;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .bag-item-remove:hover {
+            color: #ef4444;
+        }
+
+        .bag-drawer-footer {
+            padding: 20px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(14, 15, 19, 0.7);
+        }
+
+        .bag-total-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            font-size: 0.88rem;
+            color: var(--silver);
+        }
+
+        .bag-total-amount {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+        }
+
+        .btn-bag-whatsapp {
+            background: var(--whatsapp-green);
+            color: #000;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+        }
+
+        .btn-bag-whatsapp:hover {
+            background: #20ba5c;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-bag-clear {
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 0.72rem;
+            text-decoration: underline;
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* ── INNOVACIÓN: MODAL QUIZ SOMMELIER VIRTUAL ─────────────────── */
+        .quiz-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(3, 3, 4, 0.94);
+            backdrop-filter: blur(16px);
+            z-index: 1050;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .quiz-modal-overlay.open {
+            display: flex;
+        }
+
+        .quiz-modal-container {
+            background: linear-gradient(145deg, #101116 0%, #070709 100%);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 620px;
+            padding: 36px 32px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(212, 175, 55, 0.15);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .quiz-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .quiz-modal-close:hover {
+            color: var(--white);
+        }
+
+        .quiz-step-indicator {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .quiz-question-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            color: var(--white);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .quiz-question-desc {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .quiz-options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .quiz-option-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius-md);
+            padding: 14px 18px;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .quiz-option-card:hover {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+            transform: translateX(4px);
+        }
+
+        .quiz-option-card.selected {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.15);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .quiz-option-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .quiz-option-info h4 {
+            font-size: 0.88rem;
+            color: var(--white);
+            margin-bottom: 3px;
+        }
+
+        .quiz-option-info p {
+            font-size: 0.72rem;
+            color: var(--muted);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .quiz-nav-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-quiz-back {
+            background: none;
+            border: none;
+            color: var(--muted);
+            font-size: 0.76rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .btn-quiz-back:hover {
+            color: var(--white);
+        }
+
+        .quiz-results-container {
+            display: none;
+            text-align: center;
+        }
+
+        .quiz-results-container.active {
+            display: block;
+        }
+
+        .quiz-match-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 20px 0 24px;
+        }
+
+        .quiz-match-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            text-align: center;
+        }
+
+        .quiz-match-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            margin: 0 auto 10px;
+            background: #14151b;
+        }
+
+        .quiz-match-brand {
+            font-size: 0.65rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .quiz-match-name {
+            font-size: 0.9rem;
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .quiz-match-price {
+            font-size: 0.85rem;
+            color: var(--gold-bright);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .btn-match-view {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-subtle);
+            color: var(--silver);
+            padding: 6px 12px;
+            border-radius: var(--radius-pill);
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .btn-match-view:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .btn-quiz-wa {
+            background: var(--whatsapp-green);
+            color: #000;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+
+        /* ── INNOVACIÓN: MODAL COMPARADOR CARA A CARA ────────────────── */
+        .compare-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(3, 3, 4, 0.94);
+            backdrop-filter: blur(16px);
+            z-index: 1050;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .compare-modal-overlay.open {
+            display: flex;
+        }
+
+        .compare-modal-container {
+            background: linear-gradient(145deg, #101116 0%, #070709 100%);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            border-radius: var(--radius-lg);
+            width: 100%;
+            max-width: 720px;
+            padding: 32px 28px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .compare-col {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            text-align: center;
+        }
+
+        .compare-col.highlight {
+            border-color: rgba(212, 175, 55, 0.35);
+            background: rgba(212, 175, 55, 0.03);
+        }
+
+        .compare-col img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            margin: 0 auto 12px;
+            background: #14151b;
+        }
+
+        .compare-select {
+            width: 100%;
+            background: #121319;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--white);
+            padding: 8px 10px;
+            border-radius: var(--radius-sm);
+            font-size: 0.74rem;
+            margin-bottom: 12px;
+        }
+
+        .compare-spec-item {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.74rem;
+            text-align: left;
+        }
+
+        .compare-spec-label {
+            font-size: 0.64rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .compare-spec-val {
+            color: var(--silver);
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .occasion-pills {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 6px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+            .occasion-pills::-webkit-scrollbar {
+                display: none;
+            }
+            .pill-occasion {
+                white-space: nowrap;
+                flex-shrink: 0;
+                font-size: 0.7rem !important;
+                padding: 6px 10px !important;
+            }
+            .sommelier-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 16px;
+                gap: 12px;
+            }
+            .sommelier-banner-text h3 {
+                justify-content: center;
+                font-size: 1rem;
+            }
+            .btn-sommelier-trigger {
+                width: 100%;
+                justify-content: center;
+            }
+            .bag-floating-btn {
+                bottom: 74px !important;
+                left: 16px !important;
+                padding: 9px 15px !important;
+                font-size: 0.72rem !important;
+            }
+            .quiz-match-cards {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .compare-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .quiz-modal-container,
+            .compare-modal-container {
+                padding: 24px 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -3366,11 +4201,40 @@
                 <div class="section-header">
                     <span class="section-eyebrow">Colección Completa</span>
                     <h1 class="section-title">Catálogo de <span>Fragancias</span></h1>
-                    <p class="section-desc">Filtra por estilo de aroma, casa perfumera o género para encontrar tu fragancia ideal.</p>
+                    <p class="section-desc">Filtra por estilo de aroma, momento de uso, casa perfumera o género para encontrar tu fragancia ideal.</p>
+                </div>
+
+                <!-- BANNER SOMMELIER VIRTUAL (QUIZ OLFATIVO) -->
+                <div class="sommelier-banner">
+                    <div class="sommelier-banner-text">
+                        <h3>✨ Sommelier Olfativo <span>AMMAR</span></h3>
+                        <p>¿Indeciso sobre tu fragancia ideal? Responde 3 preguntas rápidas y descubre tu <em>Signature Scent</em> según tu ocasión y estilo.</p>
+                    </div>
+                    <button class="btn-sommelier-trigger" onclick="openQuizModal()">
+                        <span>Iniciar Test (30 seg)</span> →
+                    </button>
                 </div>
 
                 <!-- CONTROLES DE FILTRADO INTELIGENTE -->
                 <div class="catalog-controls">
+                    <!-- Fila de Ocasión / Estilo de Vida (Filtro por Momento) -->
+                    <div class="occasion-filter-box">
+                        <div class="occasion-filter-header">
+                            <span class="occasion-filter-title">
+                                <span>✨</span> Momento & Ocasión de Uso:
+                            </span>
+                            <span style="font-size:0.68rem; color:var(--muted);">Filtro por vibra y estilo</span>
+                        </div>
+                        <div class="occasion-pills" id="occasionPills">
+                            <button class="pill-occasion active" onclick="setOccasionFilter('ALL', this)">🌟 Todos los Momentos</button>
+                            <button class="pill-occasion" onclick="setOccasionFilter('dia', this)">☀️ Sol & Medellín Día</button>
+                            <button class="pill-occasion" onclick="setOccasionFilter('noche', this)">🌙 Citas & Noche</button>
+                            <button class="pill-occasion" onclick="setOccasionFilter('oficina', this)">💼 Oficina & Negocios</button>
+                            <button class="pill-occasion" onclick="setOccasionFilter('arabe', this)">👑 Joyas Árabes (Dubai)</button>
+                            <button class="pill-occasion" onclick="setOccasionFilter('bestia', this)">⏱️ Bestias en Duración (12h+)</button>
+                        </div>
+                    </div>
+
                     <!-- Fila de Tipo Simple (Filtro Fácil) -->
                     <div class="tipo-simple-box">
                         <div class="tipo-simple-header">
@@ -3633,6 +4497,14 @@
                     <div class="modal-spec-text" id="mStyleDesc">-</div>
                 </div>
 
+                <button class="btn-modal-bag" id="mBagBtn" onclick="toggleCartFromModal()">
+                    <span>🧺 + Añadir a mi Bolsa de Cotización</span>
+                </button>
+
+                <button class="btn-modal-compare" id="mCompareBtn" onclick="openCompareWithCurrent()">
+                    <span>⚖️ Comparar con otra Fragancia</span>
+                </button>
+
                 <button class="btn-modal-share" id="mShareBtn" onclick="shareCurrentProduct()" aria-label="Compartir enlace de esta fragancia">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
                     <span>Compartir Fragancia</span>
@@ -3757,6 +4629,92 @@
             <span>WhatsApp</span>
         </a>
     </nav>
+
+    <!-- BOTÓN FLOTANTE BOLSA DE COTIZACIÓN -->
+    <button class="bag-floating-btn" id="bagFloatingBtn" onclick="toggleBagDrawer()" aria-label="Abrir bolsa de cotización">
+        <span>🧺 Mi Bolsa</span>
+        <span class="bag-floating-count" id="bagFloatingCount">0</span>
+        <span id="bagFloatingTotal" style="color:#fff; font-weight:600; margin-left:2px;">$0 COP</span>
+    </button>
+
+    <!-- DRAWER LATERAL DE BOLSA DE COTIZACIÓN MULTIPRODUCTO -->
+    <div class="bag-drawer-overlay" id="bagDrawerOverlay" onclick="if(event.target===this) toggleBagDrawer()">
+        <div class="bag-drawer">
+            <div class="bag-drawer-header">
+                <div class="bag-drawer-title">
+                    <span>🧺</span> Mi Bolsa de Cotización
+                </div>
+                <button class="bag-drawer-close" onclick="toggleBagDrawer()" aria-label="Cerrar bolsa">✕</button>
+            </div>
+            <div class="bag-items-list" id="bagItemsList">
+                <div class="bag-empty-msg">
+                    <p style="font-size:1.5rem; margin-bottom:8px;">✨</p>
+                    <p>Tu bolsa de cotización está vacía.</p>
+                    <p style="font-size:0.75rem; color:var(--dim);">Agrega fragancias del catálogo para cotizar un pedido múltiple por WhatsApp.</p>
+                </div>
+            </div>
+            <div class="bag-drawer-footer">
+                <div class="bag-total-row">
+                    <span>Total Estimado:</span>
+                    <span class="bag-total-amount" id="bagTotalAmount">$0 COP</span>
+                </div>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-bag-whatsapp" id="btnBagWhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    Cotizar Selección por WhatsApp
+                </a>
+                <button class="btn-bag-clear" onclick="clearCart()">Vaciar selección</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL QUIZ SOMMELIER VIRTUAL -->
+    <div class="quiz-modal-overlay" id="quizModal" role="dialog" aria-modal="true">
+        <div class="quiz-modal-container">
+            <button class="quiz-modal-close" onclick="closeQuizModal()" aria-label="Cerrar test">✕</button>
+            <div id="quizStepContainer">
+                <div class="quiz-step-indicator" id="quizStepIndicator">PASO 1 DE 3 · SOMMELIER AMMAR</div>
+                <h3 class="quiz-question-title" id="quizQuestionTitle">¿Para qué ocasión o momento buscas tu fragancia?</h3>
+                <p class="quiz-question-desc" id="quizQuestionDesc">Selecciona la situación donde más deseas destacar.</p>
+                <div class="quiz-options-grid" id="quizOptionsGrid"></div>
+                <div class="quiz-nav-row">
+                    <button class="btn-quiz-back" id="btnQuizBack" onclick="prevQuizStep()" style="display:none;">← Volver al paso anterior</button>
+                </div>
+            </div>
+            <div class="quiz-results-container" id="quizResultsContainer">
+                <span class="quiz-step-indicator">✨ MATCH OLFATIVO ENCONTRADO</span>
+                <h3 class="quiz-question-title">Tu Firma Olfativa Recomendada</h3>
+                <p class="quiz-question-desc" id="quizMatchSummary">Basado en tus preferencias de uso y estilo.</p>
+                <div class="quiz-match-cards" id="quizMatchCards"></div>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-quiz-wa" id="btnQuizWa">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    Consultar este Match con Karen por WhatsApp
+                </a>
+                <button class="btn-match-view" onclick="restartQuiz()" style="margin-top:8px;">Repetir Test ↻</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL COMPARADOR CARA A CARA (DUELO OLFATIVO) -->
+    <div class="compare-modal-overlay" id="compareModal" role="dialog" aria-modal="true">
+        <div class="compare-modal-container">
+            <button class="quiz-modal-close" onclick="closeCompareModal()" aria-label="Cerrar comparador">✕</button>
+            <div class="section-header" style="margin-bottom:16px; text-align:left;">
+                <span class="section-eyebrow">Duelo Olfativo Cara a Cara</span>
+                <h3 class="section-title" style="font-size:1.5rem; margin-bottom:4px;">Comparador de <span>Fragancias</span></h3>
+                <p class="section-desc" style="font-size:0.78rem;">Compara arquitectura, pirámide de notas y longevidad entre dos opciones antes de decidir.</p>
+            </div>
+            <div class="compare-grid">
+                <div class="compare-col highlight" id="compareColA"></div>
+                <div class="compare-col" id="compareColB"></div>
+            </div>
+            <div style="margin-top:20px; text-align:center;">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-wa" id="btnCompareWa" style="margin-bottom:8px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                    Pedir Opinión a Karen entre Ambas por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- TOAST NOTIFICACIÓN COPIAR ENLACE -->
     <div class="share-toast" id="shareToast">✨ ¡Enlace de fragancia copiado!</div>
@@ -4127,6 +5085,16 @@
             });
         }
 
+        let currentOccasion = 'ALL';
+
+        function setOccasionFilter(occasion, btn) {
+            currentOccasion = occasion;
+            document.querySelectorAll('.pill-occasion').forEach(p => p.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            displayedCount = itemsPerPage;
+            applyCatalogFilters();
+        }
+
         function setTipoSimpleFilter(tipo, btn) {
             currentTipoSimple = tipo;
             document.querySelectorAll('.pill-tipo').forEach(p => p.classList.remove('active'));
@@ -4158,13 +5126,33 @@
             }
 
             // Toggle reset filters button
-            const hasActiveFilters = (query.length > 0) || (brand !== 'ALL') || (family !== 'ALL') || (currentTipoSimple !== 'ALL') || (currentGender !== 'ALL') || (sort !== 'destacado');
+            const hasActiveFilters = (query.length > 0) || (brand !== 'ALL') || (family !== 'ALL') || (currentTipoSimple !== 'ALL') || (currentGender !== 'ALL') || (currentOccasion !== 'ALL') || (sort !== 'destacado');
             const btnResetAll = document.getElementById('btnResetAllFilters');
             if (btnResetAll) {
                 btnResetAll.style.display = hasActiveFilters ? 'inline-flex' : 'none';
             }
 
             filteredProducts = PRODUCTS.filter(p => {
+                if (currentOccasion !== 'ALL') {
+                    const isArabe = ['Lattafa', 'Afnan', 'Armaf', 'Orientica', 'Bharara'].includes(p.marca);
+                    if (currentOccasion === 'arabe' && !isArabe) return false;
+                    if (currentOccasion === 'dia') {
+                        const isDia = p.tipo_simple.includes('Frescas') || p.familia.toLowerCase().includes('acuática') || p.familia.toLowerCase().includes('cítrica') || ['Light Blue', '9am Dive', 'Acqua di Gio Profondo', 'Tommy', 'L1212 Blanc', 'Rose Rush'].some(n => p.nombre.includes(n));
+                        if (!isDia) return false;
+                    }
+                    if (currentOccasion === 'noche') {
+                        const isNoche = p.tipo_simple.includes('Dulces') || p.tipo_simple.includes('Especiadas') || ['9pm', 'Khamrah', 'Good Girl', '212 VIP Black', 'Scandal', 'Asad Bourbon', 'Cloud', 'Tobacco Vanille'].some(n => p.nombre.includes(n));
+                        if (!isNoche) return false;
+                    }
+                    if (currentOccasion === 'oficina') {
+                        const isOfi = p.tipo_simple.includes('Amaderadas') || ['Boss Bottled', 'Coco Mademoiselle', 'Club de Nuit Woman', 'His Confession', 'Afeef', 'Silver Mountain Water', 'Toy 2'].some(n => p.nombre.includes(n));
+                        if (!isOfi) return false;
+                    }
+                    if (currentOccasion === 'bestia') {
+                        const isBestia = isArabe || ['Arabians Tonka', 'Oud For Greatness', 'Ombre Nomade', 'Khamrah', 'Asad', '9pm', 'Badee Al Oud', 'King', 'Starry Nights', 'Sauvage Parfum'].some(n => p.nombre.includes(n));
+                        if (!isBestia) return false;
+                    }
+                }
                 if (currentTipoSimple !== 'ALL' && p.tipo_simple !== currentTipoSimple) return false;
                 if (currentGender !== 'ALL' && p.genero !== currentGender) return false;
                 if (brand !== 'ALL' && p.marca !== brand) return false;
@@ -4209,9 +5197,13 @@
             const sortFilter = document.getElementById('sortFilter');
             if (sortFilter) sortFilter.value = 'destacado';
 
+            currentOccasion = 'ALL';
             currentTipoSimple = 'ALL';
             currentGender = 'ALL';
 
+            document.querySelectorAll('.pill-occasion').forEach((p, idx) => {
+                if (idx === 0) p.classList.add('active'); else p.classList.remove('active');
+            });
             document.querySelectorAll('.pill-tipo').forEach((p, idx) => {
                 if (idx === 0) p.classList.add('active'); else p.classList.remove('active');
             });
@@ -4278,6 +5270,479 @@
         function loadMoreProducts() {
             displayedCount += itemsPerPage;
             renderCatalog();
+        }
+
+        // ── BOLSA DE COTIZACIÓN MULTIPRODUCTO (WHATSAPP CLIENTELING) ──
+        let cartItems = [];
+        try {
+            const saved = localStorage.getItem('ammar_cart');
+            cartItems = saved ? JSON.parse(saved) : [];
+        } catch (e) {
+            cartItems = [];
+        }
+
+        function saveCart() {
+            try {
+                localStorage.setItem('ammar_cart', JSON.stringify(cartItems));
+            } catch (e) {}
+        }
+
+        function isItemInCart(id) {
+            return cartItems.some(item => item.id === id);
+        }
+
+        function toggleCartItem(id) {
+            const idx = cartItems.findIndex(item => item.id === id);
+            if (idx > -1) {
+                cartItems.splice(idx, 1);
+                showShareToast('🧺 Fragancia removida de tu bolsa');
+            } else {
+                const prod = PRODUCTS.find(p => p.id === id);
+                if (prod) {
+                    cartItems.push({
+                        id: prod.id,
+                        nombre: prod.nombre,
+                        marca: prod.marca,
+                        precio: prod.precio,
+                        imagen: prod.imagen,
+                        tipo_simple: prod.tipo_simple
+                    });
+                    showShareToast('🧺 ¡Fragancia agregada a tu bolsa!');
+                }
+            }
+            saveCart();
+            updateCartUI();
+            
+            // Actualizar botón en la tarjeta del catálogo si está visible
+            const cardBtn = document.getElementById(`btnCardBag-${id}`);
+            if (cardBtn) {
+                const inCart = isItemInCart(id);
+                cardBtn.className = inCart ? 'btn-card-bag in-cart' : 'btn-card-bag';
+                cardBtn.textContent = inCart ? '✓ Bolsa' : '+ Bolsa';
+            }
+            updateModalBagBtn();
+        }
+
+        function toggleCartFromModal() {
+            if (!currentOpenProductId) return;
+            toggleCartItem(currentOpenProductId);
+        }
+
+        function updateModalBagBtn() {
+            const mBagBtn = document.getElementById('mBagBtn');
+            if (!mBagBtn || !currentOpenProductId) return;
+            const inCart = isItemInCart(currentOpenProductId);
+            if (inCart) {
+                mBagBtn.classList.add('in-cart');
+                mBagBtn.innerHTML = '<span>✓ Fragancia en tu Bolsa (Clic para quitar)</span>';
+            } else {
+                mBagBtn.classList.remove('in-cart');
+                mBagBtn.innerHTML = '<span>🧺 + Añadir a mi Bolsa de Cotización</span>';
+            }
+        }
+
+        function clearCart() {
+            if (cartItems.length === 0) return;
+            cartItems = [];
+            saveCart();
+            updateCartUI();
+            document.querySelectorAll('.btn-card-bag').forEach(btn => {
+                btn.classList.remove('in-cart');
+                btn.textContent = '+ Bolsa';
+            });
+            updateModalBagBtn();
+            showShareToast('Bolsa vaciada');
+        }
+
+        function toggleBagDrawer(force) {
+            const overlay = document.getElementById('bagDrawerOverlay');
+            if (!overlay) return;
+            if (typeof force === 'boolean') {
+                if (force) overlay.classList.add('open');
+                else overlay.classList.remove('open');
+            } else {
+                overlay.classList.toggle('open');
+            }
+            document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+        }
+
+        function updateCartUI() {
+            const count = cartItems.length;
+            const totalCOP = cartItems.reduce((acc, item) => acc + (item.precio || 0), 0);
+
+            // Botón flotante
+            const floatBtn = document.getElementById('bagFloatingBtn');
+            const floatCount = document.getElementById('bagFloatingCount');
+            const floatTotal = document.getElementById('bagFloatingTotal');
+            if (floatBtn && floatCount && floatTotal) {
+                floatCount.textContent = count;
+                floatTotal.textContent = formatCOP(totalCOP) + ' COP';
+                if (count > 0) {
+                    floatBtn.classList.add('visible');
+                } else {
+                    floatBtn.classList.remove('visible');
+                }
+            }
+
+            // Drawer lateral
+            const bagList = document.getElementById('bagItemsList');
+            const totalAmount = document.getElementById('bagTotalAmount');
+            const btnWa = document.getElementById('btnBagWhatsApp');
+
+            if (totalAmount) {
+                totalAmount.textContent = formatCOP(totalCOP) + ' COP';
+            }
+
+            if (bagList) {
+                if (count === 0) {
+                    bagList.innerHTML = `
+                        <div class="bag-empty-msg">
+                            <p style="font-size:1.6rem; margin-bottom:8px;">✨</p>
+                            <p style="font-weight:600; color:var(--white);">Tu bolsa de cotización está vacía</p>
+                            <p style="font-size:0.75rem; color:var(--dim); margin-top:6px; line-height:1.5;">Explora el catálogo y añade tus opciones preferidas para cotizar un pedido múltiple consolidado por WhatsApp con atención personalizada.</p>
+                        </div>
+                    `;
+                    if (btnWa) {
+                        btnWa.href = '#';
+                        btnWa.style.opacity = '0.5';
+                        btnWa.style.pointerEvents = 'none';
+                    }
+                } else {
+                    bagList.innerHTML = cartItems.map(item => `
+                        <div class="bag-item">
+                            <img src="${item.imagen}" alt="${item.nombre}" class="bag-item-img" onerror="this.src='https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80'">
+                            <div class="bag-item-info">
+                                <div class="bag-item-brand">${item.marca}</div>
+                                <div class="bag-item-name">${item.nombre}</div>
+                                <div class="bag-item-price">${formatCOP(item.precio)} COP</div>
+                            </div>
+                            <button class="bag-item-remove" onclick="toggleCartItem(${item.id})" aria-label="Quitar ${item.nombre}">✕</button>
+                        </div>
+                    `).join('');
+
+                    if (btnWa) {
+                        btnWa.style.opacity = '1';
+                        btnWa.style.pointerEvents = 'auto';
+                        const itemsLines = cartItems.map((it, idx) => `${idx + 1}. ${it.nombre} - ${it.marca} (${formatCOP(it.precio)} COP)\n   🔗 ${getProductShareUrl(it.id)}`).join('\n\n');
+                        const textWa = `¡Hola AMMAR Perfumería! Deseo cotizar esta selección de mi bolsa (${count} ${count === 1 ? 'fragancia' : 'fragancias'}):\n\n${itemsLines}\n\n💰 Total Estimado: ${formatCOP(totalCOP)} COP\n\n¿Tienen entrega inmediata y servicio contraentrega en Medellín?`;
+                        btnWa.href = `https://wa.me/573128586188?text=${encodeURIComponent(textWa)}`;
+                    }
+                }
+            }
+        }
+
+        // ── SOMMELIER OLFATIVO VIRTUAL ────────────────────────────────
+        const QUIZ_QUESTIONS = [
+            {
+                title: "¿Para qué ocasión o momento buscas tu fragancia?",
+                desc: "Selecciona el escenario principal donde deseas causar mayor impacto.",
+                options: [
+                    { icon: "🌞", label: "Sol & Medellín Día a Día", desc: "Clima templado, salidas casuales, frescura y pulcritud", key: "dia" },
+                    { icon: "🌙", label: "Citas, Noche & Romance", desc: "Seducción, cenas especiales, eventos nocturnos o fiesta", key: "noche" },
+                    { icon: "💼", label: "Oficina, Negocios & Éxito", desc: "Elegancia profesional, reuniones y presencia ejecutiva", key: "oficina" },
+                    { icon: "👑", label: "Joyas Árabes & Opulencia", desc: "Exclusividad de Dubai, maderas ricas y estela distinguida", key: "arabe" }
+                ]
+            },
+            {
+                title: "¿Qué intensidad y vibra prefieres proyectar?",
+                desc: "Define el carácter aromático que mejor acompaña tu personalidad.",
+                options: [
+                    { icon: "🌊", label: "Fresca, Marina y Cítrica", desc: "Limpia, energizante, con sensación de recién duchado", key: "fresco" },
+                    { icon: "🍯", label: "Dulce, Vainilla & Gourmand", desc: "Envolvente, cálida, con acordes de vainilla, frutas o praliné", key: "dulce" },
+                    { icon: "🪵", label: "Amaderada, Cuero & Especiada", desc: "Personalidad imponente, maderas nobles, oud o especias", key: "amaderado" },
+                    { icon: "⚡", label: "Modo Bestia (12h+ Duración)", desc: "Proyección masiva que llene la habitación y dure todo el día", key: "bestia" }
+                ]
+            },
+            {
+                title: "¿Para quién es la fragancia?",
+                desc: "Selecciona el perfil de uso para afinar el match.",
+                options: [
+                    { icon: "🎩", label: "Caballero", desc: "Perfiles masculinos sofisticados o modernos", key: "Caballero" },
+                    { icon: "🌸", label: "Dama", desc: "Perfiles femeninos elegantes, dulces o radiantes", key: "Dama" },
+                    { icon: "✨", label: "Unisex / Compartida", desc: "Aromas vanguardistas y nicho para cualquier persona", key: "Unisex" }
+                ]
+            }
+        ];
+
+        let quizCurrentStep = 0;
+        let quizAnswers = {};
+
+        function openQuizModal() {
+            const modal = document.getElementById('quizModal');
+            if (!modal) return;
+            quizCurrentStep = 0;
+            quizAnswers = {};
+            document.getElementById('quizStepContainer').style.display = 'block';
+            document.getElementById('quizResultsContainer').classList.remove('active');
+            renderQuizStep();
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuizModal() {
+            const modal = document.getElementById('quizModal');
+            if (modal) modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function renderQuizStep() {
+            const q = QUIZ_QUESTIONS[quizCurrentStep];
+            if (!q) return;
+
+            document.getElementById('quizStepIndicator').textContent = `PASO ${quizCurrentStep + 1} DE 3 · SOMMELIER AMMAR`;
+            document.getElementById('quizQuestionTitle').textContent = q.title;
+            document.getElementById('quizQuestionDesc').textContent = q.desc;
+
+            const backBtn = document.getElementById('btnQuizBack');
+            if (backBtn) {
+                backBtn.style.display = quizCurrentStep > 0 ? 'inline-block' : 'none';
+            }
+
+            const grid = document.getElementById('quizOptionsGrid');
+            if (!grid) return;
+            grid.innerHTML = q.options.map(opt => `
+                <div class="quiz-option-card ${quizAnswers[quizCurrentStep] === opt.key ? 'selected' : ''}" onclick="selectQuizOption('${opt.key}')">
+                    <div class="quiz-option-icon">${opt.icon}</div>
+                    <div class="quiz-option-title">${opt.label}</div>
+                    <div class="quiz-option-desc">${opt.desc}</div>
+                </div>
+            `).join('');
+        }
+
+        function selectQuizOption(key) {
+            quizAnswers[quizCurrentStep] = key;
+            if (quizCurrentStep < QUIZ_QUESTIONS.length - 1) {
+                quizCurrentStep++;
+                renderQuizStep();
+            } else {
+                calculateQuizResult();
+            }
+        }
+
+        function prevQuizStep() {
+            if (quizCurrentStep > 0) {
+                quizCurrentStep--;
+                renderQuizStep();
+            }
+        }
+
+        function restartQuiz() {
+            openQuizModal();
+        }
+
+        function calculateQuizResult() {
+            const occasion = quizAnswers[0] || 'dia';
+            const vibe = quizAnswers[1] || 'fresco';
+            const gender = quizAnswers[2] || 'Caballero';
+
+            let scored = PRODUCTS.map(p => {
+                let score = 0;
+                const isArabe = ['Lattafa', 'Afnan', 'Armaf', 'Orientica', 'Bharara'].includes(p.marca);
+
+                // Género
+                if (gender === 'Unisex') {
+                    if (p.genero === 'Unisex') score += 5;
+                    else score += 2;
+                } else {
+                    if (p.genero === gender) score += 5;
+                    else if (p.genero === 'Unisex') score += 3;
+                    else score -= 4;
+                }
+
+                // Ocasión
+                if (occasion === 'arabe') {
+                    if (isArabe) score += 6;
+                } else if (occasion === 'dia') {
+                    if (p.tipo_simple.includes('Frescas') || p.familia.toLowerCase().includes('acuática') || p.familia.toLowerCase().includes('cítrica')) score += 5;
+                    if (['9am Dive', 'Acqua di Gio Profondo', 'Light Blue', 'L1212 Blanc'].some(n => p.nombre.includes(n))) score += 4;
+                } else if (occasion === 'noche') {
+                    if (p.tipo_simple.includes('Dulces') || p.tipo_simple.includes('Especiadas')) score += 5;
+                    if (['9pm', 'Khamrah', 'Good Girl', 'Scandal', '212 VIP Black'].some(n => p.nombre.includes(n))) score += 4;
+                } else if (occasion === 'oficina') {
+                    if (p.tipo_simple.includes('Amaderadas') || ['Boss Bottled', 'Coco Mademoiselle', 'Club de Nuit Woman', 'His Confession', 'Silver Mountain Water'].some(n => p.nombre.includes(n))) score += 5;
+                }
+
+                // Vibe
+                if (vibe === 'fresco') {
+                    if (p.tipo_simple.includes('Frescas') || p.familia.toLowerCase().includes('acuática') || p.familia.toLowerCase().includes('cítrica')) score += 6;
+                } else if (vibe === 'dulce') {
+                    if (p.tipo_simple.includes('Dulces') || p.familia.toLowerCase().includes('vainilla') || p.familia.toLowerCase().includes('gourmand')) score += 6;
+                } else if (vibe === 'amaderado') {
+                    if (p.tipo_simple.includes('Amaderadas') || p.tipo_simple.includes('Especiadas')) score += 6;
+                } else if (vibe === 'bestia') {
+                    if (isArabe || ['Arabians Tonka', 'Oud For Greatness', 'Ombre Nomade', 'Khamrah', 'Asad', '9pm'].some(n => p.nombre.includes(n))) score += 6;
+                }
+
+                if (p.destacado) score += 1;
+                return { product: p, score };
+            });
+
+            scored.sort((a, b) => b.score - a.score);
+            const topMatches = scored.slice(0, 2).map(s => s.product);
+
+            document.getElementById('quizStepContainer').style.display = 'none';
+            const resultsContainer = document.getElementById('quizResultsContainer');
+            resultsContainer.classList.add('active');
+
+            const matchCards = document.getElementById('quizMatchCards');
+            if (matchCards) {
+                matchCards.innerHTML = topMatches.map((p, idx) => `
+                    <div class="quiz-match-card">
+                        <span class="badge-match">${idx === 0 ? '★ Recomendación Principal' : '✨ Alternativa Destacada'}</span>
+                        <img src="${p.imagen}" alt="${p.nombre}" class="quiz-match-img" onerror="this.src='https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80'">
+                        <div class="quiz-match-brand">${p.marca}</div>
+                        <div class="quiz-match-name">${p.nombre}</div>
+                        <div class="quiz-match-price">${formatCOP(p.precio)} COP</div>
+                        <div class="quiz-match-notes"><strong>Notas:</strong> ${p.notas}</div>
+                        <div class="quiz-match-actions">
+                            <button class="btn-match-view" onclick="closeQuizModal(); openProductModal(${p.id})">Ver en Catálogo</button>
+                            <button class="btn-card-bag ${isItemInCart(p.id) ? 'in-cart' : ''}" onclick="toggleCartItem(${p.id})">${isItemInCart(p.id) ? '✓ En Bolsa' : '+ Añadir a Bolsa'}</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const p1 = topMatches[0];
+            const p2 = topMatches[1];
+            const occasionLabels = { dia: "Sol & Medellín Día a Día", noche: "Citas & Noche", oficina: "Oficina & Negocios", arabe: "Joyas Árabes (Dubai)" };
+            const vibeLabels = { fresco: "Fresco / Limpio", dulce: "Dulce / Gourmand", amaderado: "Amaderado / Oscuro", bestia: "Modo Bestia 12h+" };
+            
+            let textWa = `¡Hola Karen! Hice el Test del Sommelier Olfativo en AMMAR Perfumería:\n`;
+            textWa += `🎯 Ocasión: ${occasionLabels[occasion] || occasion}\n`;
+            textWa += `✨ Estilo: ${vibeLabels[vibe] || vibe}\n`;
+            textWa += `👤 Preferencia: ${gender}\n\n`;
+            textWa += `Mis matches recomendados fueron:\n`;
+            if (p1) textWa += `1. ${p1.nombre} (${p1.marca} - ${formatCOP(p1.precio)} COP)\n   🔗 ${getProductShareUrl(p1.id)}\n`;
+            if (p2) textWa += `2. ${p2.nombre} (${p2.marca} - ${formatCOP(p2.precio)} COP)\n   🔗 ${getProductShareUrl(p2.id)}\n`;
+            textWa += `\n¿Me cuentas si los tienen disponibles para entrega inmediata en Medellín?`;
+
+            const btnWa = document.getElementById('btnQuizWa');
+            if (btnWa) {
+                btnWa.href = `https://wa.me/573128586188?text=${encodeURIComponent(textWa)}`;
+            }
+        }
+
+        // ── DUELO OLFATIVO (COMPARADOR CARA A CARA) ───────────────────
+        let compareState = {
+            prodAId: null,
+            prodBId: null
+        };
+
+        function openCompareModal(idA, idB) {
+            const modal = document.getElementById('compareModal');
+            if (!modal) return;
+            
+            compareState.prodAId = idA || (PRODUCTS[0] ? PRODUCTS[0].id : null);
+            if (idB) {
+                compareState.prodBId = idB;
+            } else {
+                const currentProd = PRODUCTS.find(p => p.id === compareState.prodAId);
+                const counterpart = PRODUCTS.find(p => p.id !== compareState.prodAId && (p.familia === (currentProd && currentProd.familia) || p.marca === (currentProd && currentProd.marca))) || PRODUCTS.find(p => p.id !== compareState.prodAId);
+                compareState.prodBId = counterpart ? counterpart.id : null;
+            }
+
+            renderCompareModal();
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openCompareWithCurrent() {
+            if (!currentOpenProductId) return;
+            const currentId = currentOpenProductId;
+            closeProductModal(false);
+            openCompareModal(currentId);
+        }
+
+        function closeCompareModal() {
+            const modal = document.getElementById('compareModal');
+            if (modal) modal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function onCompareSelectChange(slot, newId) {
+            const val = parseInt(newId, 10);
+            if (slot === 'A') compareState.prodAId = val;
+            if (slot === 'B') compareState.prodBId = val;
+            renderCompareModal();
+        }
+
+        function getProductLongevity(p) {
+            const isArabe = ['Lattafa', 'Afnan', 'Armaf', 'Orientica', 'Bharara', 'Initio', 'Montale'].includes(p.marca);
+            if (['Arabians Tonka', 'Oud For Greatness', 'Ombre Nomade', 'Khamrah', 'Asad', '9pm', 'Badee Al Oud', 'King', 'Starry Nights'].some(n => p.nombre.includes(n))) {
+                return '⚡ 12h+ (Modo Bestia / Proyección Alta)';
+            }
+            if (isArabe) {
+                return '🔥 9 - 12h (Larga Fijación / Eau de Parfum)';
+            }
+            return '⏱️ 6 - 8h (Estela Moderada a Alta / Designer)';
+        }
+
+        function renderCompareColumn(slot, p) {
+            if (!p) return '<div style="padding:20px; color:var(--dim);">Fragancia no encontrada</div>';
+            
+            const optionsHtml = PRODUCTS.slice().sort((a,b) => a.nombre.localeCompare(b.nombre)).map(item => `
+                <option value="${item.id}" ${item.id === p.id ? 'selected' : ''}>${item.nombre} (${item.marca} - ${formatCOP(item.precio)} COP)</option>
+            `).join('');
+
+            const inCart = isItemInCart(p.id);
+
+            return `
+                <div style="margin-bottom:12px;">
+                    <label style="font-size:0.7rem; letter-spacing:1px; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:4px;">Seleccionar Fragancia ${slot}:</label>
+                    <select class="compare-select" onchange="onCompareSelectChange('${slot}', this.value)" style="width:100%; padding:8px 10px; background:var(--surface); border:1px solid var(--border); border-radius:6px; color:var(--white); font-size:0.8rem;">
+                        ${optionsHtml}
+                    </select>
+                </div>
+                <div style="text-align:center; margin-bottom:12px;">
+                    <img src="${p.imagen}" alt="${p.nombre}" style="width:100px; height:100px; object-fit:contain; border-radius:8px; background:var(--surface);" onerror="this.src='https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80'">
+                </div>
+                <div style="font-size:0.75rem; color:var(--gold); text-transform:uppercase; letter-spacing:1px;">${p.marca}</div>
+                <h4 style="font-family:var(--font-heading); color:var(--white); font-size:1.15rem; margin:2px 0 6px;">${p.nombre}</h4>
+                <div style="font-size:1.1rem; color:var(--gold); font-weight:700; margin-bottom:14px;">${formatCOP(p.precio)} <span style="font-size:0.75rem; color:var(--dim); font-weight:400;">COP</span></div>
+
+                <div style="display:flex; flex-direction:column; gap:8px; text-align:left; font-size:0.78rem;">
+                    <div style="background:var(--surface); padding:8px 10px; border-radius:6px; border:1px solid var(--border);">
+                        <div style="color:var(--dim); font-size:0.68rem; text-transform:uppercase;">Familia Olfativa</div>
+                        <div style="color:var(--white); font-weight:500;">${p.familia}</div>
+                    </div>
+                    <div style="background:var(--surface); padding:8px 10px; border-radius:6px; border:1px solid var(--border);">
+                        <div style="color:var(--dim); font-size:0.68rem; text-transform:uppercase;">Estilo Simplificado</div>
+                        <div style="color:var(--white); font-weight:500;">${p.tipo_simple} · ${p.genero}</div>
+                    </div>
+                    <div style="background:var(--surface); padding:8px 10px; border-radius:6px; border:1px solid var(--border);">
+                        <div style="color:var(--dim); font-size:0.68rem; text-transform:uppercase;">Longevidad & Fijación</div>
+                        <div style="color:var(--white); font-weight:500;">${getProductLongevity(p)}</div>
+                    </div>
+                    <div style="background:var(--surface); padding:8px 10px; border-radius:6px; border:1px solid var(--border);">
+                        <div style="color:var(--dim); font-size:0.68rem; text-transform:uppercase;">Notas Principales</div>
+                        <div style="color:var(--white); font-size:0.74rem; line-height:1.4;">${p.notas}</div>
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:8px; margin-top:14px;">
+                    <button class="btn-card-detail" style="flex:1; padding:8px;" onclick="closeCompareModal(); openProductModal(${p.id})">Ver Ficha</button>
+                    <button class="btn-card-bag ${inCart ? 'in-cart' : ''}" style="flex:1; padding:8px;" onclick="toggleCartItem(${p.id})">${inCart ? '✓ En Bolsa' : '+ Bolsa'}</button>
+                </div>
+            `;
+        }
+
+        function renderCompareModal() {
+            const pA = PRODUCTS.find(p => p.id === compareState.prodAId) || PRODUCTS[0];
+            const pB = PRODUCTS.find(p => p.id === compareState.prodBId) || PRODUCTS[1];
+
+            const colA = document.getElementById('compareColA');
+            const colB = document.getElementById('compareColB');
+            if (colA) colA.innerHTML = renderCompareColumn('A', pA);
+            if (colB) colB.innerHTML = renderCompareColumn('B', pB);
+
+            const btnCompareWa = document.getElementById('btnCompareWa');
+            if (btnCompareWa && pA && pB) {
+                let textWa = `¡Hola Karen! Estoy usando el Comparador Olfativo de la tienda y tengo dudas entre dos fragancias:\n\n`;
+                textWa += `1️⃣ ${pA.nombre} (${pA.marca} - ${formatCOP(pA.precio)} COP)\n   🔗 ${getProductShareUrl(pA.id)}\n\n`;
+                textWa += `2️⃣ ${pB.nombre} (${pB.marca} - ${formatCOP(pB.precio)} COP)\n   🔗 ${getProductShareUrl(pB.id)}\n\n`;
+                textWa += `¿Cuál de las dos me recomiendas según tu experiencia para mi estilo?`;
+                btnCompareWa.href = `https://wa.me/573128586188?text=${encodeURIComponent(textWa)}`;
+            }
         }
 
         // ── ENLACES PERMANENTES (PERMALINKS) Y COMPARTIR ──────────────
@@ -4350,6 +5815,9 @@
             const imgUrl = getProductImageUrl(p.imagen);
             const textWa = `Hola AMMAR Perfumería, deseo comprar la fragancia ${p.nombre} de ${p.marca} (${formatCOP(p.precio)} COP - ${p.tipo_simple}). ¿Tienen entrega inmediata?\n\n🔗 Ver fragancia: ${prodUrl}\n📸 Foto: ${imgUrl}`;
             const msgWa = encodeURIComponent(textWa);
+            const inCart = isItemInCart(p.id);
+            const bagClass = inCart ? 'btn-card-bag in-cart' : 'btn-card-bag';
+            const bagText = inCart ? '✓ Bolsa' : '+ Bolsa';
             return `
                 <div class="product-card">
                     <div class="card-img-wrap" onclick="openProductModal(${p.id})">
@@ -4372,6 +5840,7 @@
 
                         <div class="card-actions">
                             <button class="btn-card-detail" onclick="openProductModal(${p.id})">Ver Detalle</button>
+                            <button class="${bagClass}" id="btnCardBag-${p.id}" onclick="event.stopPropagation(); toggleCartItem(${p.id})" title="${inCart ? 'Quitar de la bolsa' : 'Añadir a cotización múltiple'}">${bagText}</button>
                             <a href="https://wa.me/573128586188?text=${msgWa}" target="_blank" rel="noopener noreferrer" class="btn-card-wa" aria-label="Comprar ${p.nombre} por WhatsApp">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             </a>
@@ -4422,6 +5891,7 @@
             const textWa = `¡Hola AMMAR Perfumería! Estoy viendo ${p.nombre} de ${p.marca} (${p.tipo_simple}) en la tienda virtual (${formatCOP(p.precio)} COP) y deseo coordinar la compra y entrega.\n\n🔗 Ver fragancia: ${prodUrl}\n📸 Foto: ${imgUrl}`;
             const msgWa = encodeURIComponent(textWa);
             document.getElementById('mWaBtn').href = `https://wa.me/573128586188?text=${msgWa}`;
+            updateModalBagBtn();
 
             document.getElementById('productModal').classList.add('open');
             document.body.style.overflow = 'hidden';
@@ -4439,11 +5909,26 @@
         document.getElementById('productModal').addEventListener('click', (e) => {
             if (e.target.id === 'productModal') closeProductModal();
         });
+        const qModal = document.getElementById('quizModal');
+        if (qModal) {
+            qModal.addEventListener('click', (e) => {
+                if (e.target.id === 'quizModal') closeQuizModal();
+            });
+        }
+        const cModal = document.getElementById('compareModal');
+        if (cModal) {
+            cModal.addEventListener('click', (e) => {
+                if (e.target.id === 'compareModal') closeCompareModal();
+            });
+        }
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 closeProductModal();
                 closeBlogModal();
+                closeQuizModal();
+                closeCompareModal();
+                toggleBagDrawer(false);
             }
         });
 
@@ -4475,7 +5960,10 @@
             }
         }
 
-        window.addEventListener('DOMContentLoaded', handleUrlHash);
+        window.addEventListener('DOMContentLoaded', () => {
+            handleUrlHash();
+            updateCartUI();
+        });
         window.addEventListener('hashchange', handleUrlHash);
 
         // WhatsApp Floating Tooltip Auto-show/hide
